@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a93e36eeb3f891543aee0f38cf11df25
+timeCreated: 1521507189
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Beauty and the Dutch
+  fontNames:
+  - Beauty and the Dutch
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
