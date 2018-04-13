@@ -16,7 +16,7 @@ public class Pruebas : MonoBehaviour {
 		DatosUsuario.Instance.obras[0].calificada=false;
 		DatosUsuario.Instance.obras[0].url="C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Creacion/AssetBundles/StandaloneWindows/obra1";
 		DatosUsuario.Instance.obras[0].tipo="escultura";
-		DatosUsuario.Instance.obras[0].posicion=new Vector3(50,0,50);
+		DatosUsuario.Instance.obras[0].posicion=new Vector3(50,-35,50);
 		DatosUsuario.Instance.obras[0].anguloRotacion=30;
 		
 		DatosUsuario.Instance.obras.Add(new Obra("Gioconda",10));
@@ -38,6 +38,9 @@ public class Pruebas : MonoBehaviour {
 		DatosUsuario.Instance.obras[2].anguloRotacion=-90;
 
 		DatosUsuario.Instance.datosCompletos=true;
+
+		GameObject acomodarObras = GameObject.Find ("AcomodarObras");
+		acomodarObras.GetComponent<AcomodarObras> ().acomodarObras ();
 
 
 

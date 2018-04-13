@@ -51,24 +51,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AbrirObra.cs" />
-     <Compile Include="Assets\Scripts\CargarObras.cs" />
-     <Compile Include="Assets\Scripts\ControlCalificacion.cs" />
-     <Compile Include="Assets\Scripts\ControlCamaras.cs" />
-     <Compile Include="Assets\Scripts\ControlTiempo.cs" />
      <Compile Include="Assets\Scripts\ControlVisibilidadCanvas.cs" />
-     <Compile Include="Assets\Scripts\ControlVisibilidadCanvasObra.cs" />
-     <Compile Include="Assets\Scripts\ControlVisualizacionObra.cs" />
-     <Compile Include="Assets\Scripts\DatosUsuario.cs" />
+     <Compile Include="Assets\Scripts\Datos\DatosUsuario.cs" />
+     <Compile Include="Assets\Scripts\Datos\Obra.cs" />
+     <Compile Include="Assets\Scripts\Datos\ObraActual.cs" />
      <Compile Include="Assets\Scripts\MantenerDatosEntreEscenas\ProjectVars.cs" />
      <Compile Include="Assets\Scripts\MantenerDatosEntreEscenas\Singleton.cs" />
-     <Compile Include="Assets\Scripts\Obra.cs" />
-     <Compile Include="Assets\Scripts\ObraActual.cs" />
-     <Compile Include="Assets\Scripts\PlayerNavigation.cs" />
      <Compile Include="Assets\Scripts\Pruebas.cs" />
-     <Compile Include="Assets\Scripts\SceneLoader.cs" />
-     <Compile Include="Assets\Scripts\TransformacionObra.cs" />
-     <Compile Include="Assets\Scripts\UI_HoldButton.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlCalificacion.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlCamaras.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlTiempo.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlVisibilidadCanvasObra.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlVisualizacionObra.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\TransformacionObra.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\UI_HoldButton.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\AbrirObra.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\AcomodarObras.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\CargarObras.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlColisionAvatar.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlVisibilidadCanvas.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\PlayerNavigation.cs" />
+     <Compile Include="Assets\Scripts\SceneLoader\SceneLoader.cs" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFreeOutlineOnly.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlySetup.cginc" />

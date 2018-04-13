@@ -1,15 +1,29 @@
-{
- "folders":
- [
-  {
-  "follow_symlinks": true,
-  "path": "Assets/Scripts",
-   "file_exclude_patterns":
-   [
-    "*.dll",
-    "*.meta"
-   ]
-  }
- ],
- "solution_file": "./Prototipo3_Mostrar.sln"
-}
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo3_Mostrar", "Assembly-CSharp.csproj", "{3979850F-799A-6972-3257-C5212FDB82B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo3_Mostrar", "Assembly-CSharp-Editor.csproj", "{D8B5E4BB-650C-9351-B466-55F2DA015704}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3979850F-799A-6972-3257-C5212FDB82B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3979850F-799A-6972-3257-C5212FDB82B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3979850F-799A-6972-3257-C5212FDB82B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3979850F-799A-6972-3257-C5212FDB82B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B5E4BB-650C-9351-B466-55F2DA015704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B5E4BB-650C-9351-B466-55F2DA015704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B5E4BB-650C-9351-B466-55F2DA015704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B5E4BB-650C-9351-B466-55F2DA015704}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

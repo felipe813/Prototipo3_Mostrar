@@ -1,10 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Pruebas.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Recorrido\Recorrido\AcomodarObras.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerNavigation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AbrirObra.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Pruebas.cs" Line="23" Column="40" />
+      <File FileName="Assets\Scripts\Pruebas.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Datos\DatosUsuario.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Datos\Obra.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Datos\ObraActual.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\MostrarObra\ControlCalificacion.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\MostrarObra\ControlCamaras.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\MostrarObra\ControlTiempo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\MostrarObra\ControlVisibilidadCanvasObra.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\MostrarObra\ControlVisualizacionObra.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\MostrarObra\TransformacionObra.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\MostrarObra\UI_HoldButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\Recorrido\CargarObras.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\Recorrido\ControlColisionAvatar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\Recorrido\ControlVisibilidadCanvas.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\Recorrido\PlayerNavigation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recorrido\Recorrido\AcomodarObras.cs" Line="37" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

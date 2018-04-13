@@ -63,8 +63,6 @@ public class ControlCamaras : MonoBehaviour
 			contador++;
 			yield return new WaitForSeconds(segundosCambio);
 		}
-        //this.camaraPrincipal.transform.position = posFinal;
-        //this.camaraPrincipal.transform.eulerAngles = rotacionFinal;
         yield return null;
     }
 }

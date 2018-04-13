@@ -4,8 +4,9 @@ using UnityEngine;
 public class AbrirObra : MonoBehaviour
 {
     private int _id;
-    private void OnMouseUpAsButton()
-    {
+    public void abrirObra()
+	{
+		GameObject.Find ("Avatar").SetActive(false);
         GameObject.Find("CanvasIntroduccion").GetComponent<ControlVisibilidadCanvas>().activarCanvas();
         ObraActual.Instance.idObraActual = id;
     }

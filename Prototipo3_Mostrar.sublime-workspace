@@ -19,14 +19,13 @@
 			}
 		},
 		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\npublic class AbrirObra : MonoBehaviour\n{\n    private int _id;\n    private void OnMouseUpAsButton()\n    {\n\n        GameObject.Find(\"CanvasIntroduccion\").GetComponent<ControlVisibilidadCanvas>().activarCanvas();\n        ObraActual.Instance.idObraActual = id;\n    }\n    public int id\n    {\n        get { return _id; }\n        set { _id = value; }\n    }\n}\n",
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\npublic class AbrirObra : MonoBehaviour\n{\n    private int _id;\n    private void OnMouseUpAsButton()\n    {\n        GameObject.Find(\"CanvasIntroduccion\").GetComponent<ControlVisibilidadCanvas>().activarCanvas();\n        ObraActual.Instance.idObraActual = id;\n    }\n    public int id\n    {\n        get { return _id; }\n        set { _id = value; }\n    }\n}\n",
 			"file": "Assets/Scripts/AbrirObra.cs",
 			"file_size": 433,
 			"file_write_time": 131678968946130000,
 			"settings":
 			{
-				"buffer_size": 431,
-				"encoding": "UTF-8 with BOM",
+				"buffer_size": 430,
 				"line_ending": "Unix"
 			}
 		}
@@ -66,10 +65,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Scripts"
-	],
 	"file_history":
 	[
 		"/C/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Scripts/AbrirObra.cs",
@@ -146,15 +141,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 431,
+						"buffer_size": 430,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								422,
-								422
+								183,
+								183
 							]
 						],
 						"settings":

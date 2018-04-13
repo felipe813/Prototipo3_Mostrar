@@ -57,6 +57,7 @@ public class CargarObras : MonoBehaviour
                 //GameObject marco = GameObject.Find("Cuadro");
 				GameObject marco = obraPresentada.transform.Find("Cuadro").gameObject;
                 marco.AddComponent<AbrirObra>();
+				//Debug.Log ("Se le agrego a el cuadro "+DatosUsuario.Instance.obras[index].id+" el script.");
                 marco.GetComponent<AbrirObra>().id = DatosUsuario.Instance.obras[index].id;
                 marco.GetComponent<Renderer>().material.mainTexture = www.texture;
             }

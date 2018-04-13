@@ -20,6 +20,26 @@ public class DatosUsuario : Singleton<DatosUsuario>
     public int cantidadObras(){
         return obras.Count;
     }
+
+	public int cantidadEsculturas(){
+		int retorno = 0;
+		for(int i=0;i<obras.Count;i++){
+			if(obras[i].tipo.Equals("escultura")){
+				retorno++;
+			}
+		}
+		return retorno;
+	}
+
+	public int cantidadPinturas(){
+		int retorno = 0;
+		for(int i=0;i<obras.Count;i++){
+			if(obras[i].tipo.Equals("pintura")){
+				retorno++;
+			}
+		}
+		return retorno;
+	}
     public Obra buscarObra(int idObra){
         Obra retorno=null;
         for (int i = 0; i < obras.Count; i++)
@@ -32,6 +52,20 @@ public class DatosUsuario : Singleton<DatosUsuario>
         }
         return retorno;
     }
+
+	public void addPosicionObra(Vector3 posicion,float anguloRotacion,int index,string tipo){
+		int contadorIndex = 0;
+		for (int i = 0; i < obras.Count; i++)
+		{
+			if(obras[i].tipo.Equals(tipo)){
+				if(contadorIndex==index){
+					obras [i].posicion = posicion;
+					obras [i].anguloRotacion = anguloRotacion;
+				}
+				contadorIndex++;
+			}
+		}
+	}
     protected DatosUsuario() { }
     // Método para hacer una impresion en consola de los datos de todas las obras de un usuaio para un recorrido.
 	public void ImprimirDatosObras()
