@@ -54,6 +54,7 @@ public class DatosUsuario : Singleton<DatosUsuario>
     }
 
 	public void addPosicionObra(Vector3 posicion,float anguloRotacion,int index,string tipo){
+       
 		int contadorIndex = 0;
 		for (int i = 0; i < obras.Count; i++)
 		{

@@ -37,12 +37,18 @@ public class Pruebas : MonoBehaviour {
 		DatosUsuario.Instance.obras[2].posicion=new Vector3(-75,-25,0);
 		DatosUsuario.Instance.obras[2].anguloRotacion=-90;
 
-		DatosUsuario.Instance.datosCompletos=true;
+		DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",6));
+		//DatosUsuario.Instance.obras[2].id=3;
+		//DatosUsuario.Instance.obras[2].nombre="El Beso";
+		DatosUsuario.Instance.obras[3].calificada=false;
+		DatosUsuario.Instance.obras[3].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
+		DatosUsuario.Instance.obras[3].tipo="pintura";
 
 		GameObject acomodarObras = GameObject.Find ("AcomodarObras");
-		acomodarObras.GetComponent<AcomodarObras> ().acomodarObras ();
+		AcomodarObras script=acomodarObras.GetComponent<AcomodarObras> ();
+		StartCoroutine(script.acomodarObras());
 
-
+		
 
 
 	}

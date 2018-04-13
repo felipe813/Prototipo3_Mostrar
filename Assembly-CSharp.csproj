@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ControlVisibilidadCanvas.cs" />
      <Compile Include="Assets\Scripts\Datos\DatosUsuario.cs" />
      <Compile Include="Assets\Scripts\Datos\Obra.cs" />
      <Compile Include="Assets\Scripts\Datos\ObraActual.cs" />
