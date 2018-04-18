@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class CargarObras : MonoBehaviour
 {
+    private int cantidadObrasCargadas;
+    private int cantidadObras;
     void Start()
     {
+        cantidadObrasCargadas = 0;
         StartCoroutine(cargar());
     }
     public IEnumerator cargar()
@@ -13,11 +16,12 @@ public class CargarObras : MonoBehaviour
         {
             yield return null;
         }
-        int cantidadObras = DatosUsuario.Instance.cantidadObras();
+        cantidadObras = DatosUsuario.Instance.cantidadObras();
         for (int i = 0; i < cantidadObras; i++)
         {
             StartCoroutine(MostrarObra(i));
         }
+
     }
     private IEnumerator MostrarObra(int index)
     {
@@ -34,6 +38,7 @@ public class CargarObras : MonoBehaviour
             GameObject mya = obra.LoadAsset("Obra") as GameObject;
             GameObject obraPresentada = Instantiate(mya);
             GameObject modelo3D = GameObject.Find("Modelo" + DatosUsuario.Instance.obras[index].id);
+           // GameObject modelo3D = GameObject.Find("Modelo");
             GameObject obraPrincipal = modelo3D.transform.GetChild(0).gameObject;
 
             obraPrincipal.AddComponent<AbrirObra>();
@@ -42,6 +47,11 @@ public class CargarObras : MonoBehaviour
             GameObject contenedorObra = GameObject.Find("Obras");
             obraPresentada.transform.parent = contenedorObra.transform;
             obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
+            cantidadObrasCargadas++;
+            if (cantidadObrasCargadas == cantidadObras)
+            {
+                GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
+            }
         }
         else if (tipo.Equals("pintura"))
         {
@@ -55,11 +65,16 @@ public class CargarObras : MonoBehaviour
             {
                 yield return www;
                 //GameObject marco = GameObject.Find("Cuadro");
-				GameObject marco = obraPresentada.transform.Find("Cuadro").gameObject;
+                GameObject marco = obraPresentada.transform.Find("Cuadro").gameObject;
                 marco.AddComponent<AbrirObra>();
-				//Debug.Log ("Se le agrego a el cuadro "+DatosUsuario.Instance.obras[index].id+" el script.");
+                //Debug.Log ("Se le agrego a el cuadro "+DatosUsuario.Instance.obras[index].id+" el script.");
                 marco.GetComponent<AbrirObra>().id = DatosUsuario.Instance.obras[index].id;
                 marco.GetComponent<Renderer>().material.mainTexture = www.texture;
+                cantidadObrasCargadas++;
+                if (cantidadObrasCargadas == cantidadObras)
+                {
+                    GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
+                }
             }
         }
     }

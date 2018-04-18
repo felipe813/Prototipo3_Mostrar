@@ -18,6 +18,8 @@ public class Pruebas : MonoBehaviour {
 		DatosUsuario.Instance.obras[0].tipo="escultura";
 		DatosUsuario.Instance.obras[0].posicion=new Vector3(50,-35,50);
 		DatosUsuario.Instance.obras[0].anguloRotacion=30;
+
+		
 		
 		DatosUsuario.Instance.obras.Add(new Obra("Gioconda",10));
 		DatosUsuario.Instance.obras[1].id=10;
@@ -38,11 +40,30 @@ public class Pruebas : MonoBehaviour {
 		DatosUsuario.Instance.obras[2].anguloRotacion=-90;
 
 		DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",6));
-		//DatosUsuario.Instance.obras[2].id=3;
-		//DatosUsuario.Instance.obras[2].nombre="El Beso";
 		DatosUsuario.Instance.obras[3].calificada=false;
 		DatosUsuario.Instance.obras[3].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
 		DatosUsuario.Instance.obras[3].tipo="pintura";
+
+		DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",7));
+		DatosUsuario.Instance.obras[4].calificada=false;
+		DatosUsuario.Instance.obras[4].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
+		DatosUsuario.Instance.obras[4].tipo="pintura";
+
+		DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",8));
+		DatosUsuario.Instance.obras[5].calificada=false;
+		DatosUsuario.Instance.obras[5].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
+		DatosUsuario.Instance.obras[5].tipo="pintura";
+
+				DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",9));
+		DatosUsuario.Instance.obras[6].calificada=false;
+		DatosUsuario.Instance.obras[6].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
+		DatosUsuario.Instance.obras[6].tipo="pintura";
+
+		DatosUsuario.Instance.obras.Add(new Obra("Borghese vase",2));
+		DatosUsuario.Instance.obras[7].calificada=false;
+		DatosUsuario.Instance.obras[7].url="C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Creacion/AssetBundles/StandaloneWindows/obra2";
+		DatosUsuario.Instance.obras[7].tipo="escultura";
+
 
 		GameObject acomodarObras = GameObject.Find ("AcomodarObras");
 		AcomodarObras script=acomodarObras.GetComponent<AcomodarObras> ();

@@ -11,14 +11,14 @@ public class AcomodarObras : MonoBehaviour
     private int cantidadPinturas;
     private int cantidadEsculturas;
     private int altopinturas;
-	private bool creacionCompleta;
+    private bool creacionCompleta;
     // Use this for initialization
     //2.....0
     //
     //3.....1
     void Start()
     {
-		creacionCompleta=false;
+        creacionCompleta = false;
         Vector3 posicionPlanoInferior = planoInferior.transform.position;
         Vector3 escalaPlanoInferior = planoInferior.transform.localScale * 10;
         verticesPlanoInferior = new Vector3[4];
@@ -31,65 +31,146 @@ public class AcomodarObras : MonoBehaviour
         Vector3 escalaPlanoSuperior = planoSuperior.transform.localScale * 10;
         verticesPlanoSuperior = new Vector3[4];
         verticesPlanoSuperior[0] = new Vector3(posicionPlanoSuperior.x + escalaPlanoSuperior.x / 2, posicionPlanoSuperior.y, posicionPlanoSuperior.z + escalaPlanoSuperior.z / 2);
-		verticesPlanoSuperior[1] = new Vector3(posicionPlanoSuperior.x + escalaPlanoSuperior.x / 2, posicionPlanoSuperior.y, posicionPlanoSuperior.z - escalaPlanoSuperior.z / 2);
+        verticesPlanoSuperior[1] = new Vector3(posicionPlanoSuperior.x + escalaPlanoSuperior.x / 2, posicionPlanoSuperior.y, posicionPlanoSuperior.z - escalaPlanoSuperior.z / 2);
         verticesPlanoSuperior[2] = new Vector3(posicionPlanoSuperior.x - escalaPlanoSuperior.x / 2, posicionPlanoSuperior.y, posicionPlanoSuperior.z + escalaPlanoSuperior.z / 2);
         verticesPlanoSuperior[3] = new Vector3(posicionPlanoSuperior.x - escalaPlanoSuperior.x / 2, posicionPlanoSuperior.y, posicionPlanoSuperior.z - escalaPlanoSuperior.z / 2);
-	
-		creacionCompleta=true;
-	}
+
+        creacionCompleta = true;
+    }
 
     public IEnumerator acomodarObras()
     {
-		while( !creacionCompleta){
-			yield return null;
-		}
+        while (!creacionCompleta)
+        {
+            yield return null;
+        }
         cantidadPinturas = DatosUsuario.Instance.cantidadPinturas();
         cantidadEsculturas = DatosUsuario.Instance.cantidadEsculturas();
 
         altopinturas = 14;
-        Vector3[] medio=new Vector3[10];
+        Vector3[] medio = new Vector3[10];
         switch (cantidadPinturas)
         {
             case 1:
-				// Si hay una pintura se pone arriba
-				medio[0]=puntoMedioX(verticesPlanoSuperior[0], verticesPlanoSuperior[2]);
-                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x,medio[0].y+altopinturas,medio[0].z), 0f, 0, "pintura");
+                // Si hay una pintura se pone arriba
+                medio[0] = puntoMedioX(verticesPlanoSuperior[0], verticesPlanoSuperior[2]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x, medio[0].y + altopinturas, medio[0].z), 0f, 0, "pintura");
                 break;
             case 2:
-				// Si hay dos pinturas se pone una arriba y otra abajo
-                medio[0]=puntoMedioX(verticesPlanoSuperior[0], verticesPlanoSuperior[2]);
-                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x,medio[0].y+altopinturas,medio[0].z), 0f, 0, "pintura");
-				
-				medio[1]=puntoMedioX(verticesPlanoInferior[0], verticesPlanoInferior[2]);
-                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[1].x,medio[1].y+altopinturas,medio[1].z), 0f, 1, "pintura");
-                break;
-			case 3:
-				medio[0]=puntoMedioZ(verticesPlanoSuperior[0], verticesPlanoSuperior[1]);
-                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x,medio[0].y+altopinturas,medio[0].z), 90f, 0, "pintura");
-				
-				medio[1]=puntoMedioZ(verticesPlanoSuperior[2], verticesPlanoSuperior[3]);
-                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[1].x,medio[1].y+altopinturas,medio[1].z), -90f, 1, "pintura");
+                // Si hay dos pinturas se pone una arriba y otra abajo
+                medio[0] = puntoMedioX(verticesPlanoSuperior[0], verticesPlanoSuperior[2]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x, medio[0].y + altopinturas, medio[0].z), 0f, 0, "pintura");
 
-				medio[2]=puntoMedioX(verticesPlanoInferior[0], verticesPlanoInferior[2]);
-                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[2].x,medio[2].y+altopinturas,medio[2].z), 0f, 2, "pintura");
-				break;
+                medio[1] = puntoMedioX(verticesPlanoInferior[0], verticesPlanoInferior[2]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[1].x, medio[1].y + altopinturas, medio[1].z), 0f, 1, "pintura");
+                break;
+            case 3:
+                medio[0] = puntoMedioZ(verticesPlanoSuperior[0], verticesPlanoSuperior[1]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x, medio[0].y + altopinturas, medio[0].z), 90f, 0, "pintura");
+
+                medio[1] = puntoMedioZ(verticesPlanoSuperior[2], verticesPlanoSuperior[3]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[1].x, medio[1].y + altopinturas, medio[1].z), -90f, 1, "pintura");
+
+                medio[2] = puntoMedioX(verticesPlanoInferior[0], verticesPlanoInferior[2]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[2].x, medio[2].y + altopinturas, medio[2].z), 0f, 2, "pintura");
+                break;
+            case 4:
+                medio[0] = puntoMedioZ(verticesPlanoSuperior[0], verticesPlanoSuperior[1]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x, medio[0].y + altopinturas, medio[0].z), 90f, 0, "pintura");
+
+                medio[1] = puntoMedioZ(verticesPlanoSuperior[2], verticesPlanoSuperior[3]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[1].x, medio[1].y + altopinturas, medio[1].z), -90f, 1, "pintura");
+
+                medio[2] = puntoMedioZ(verticesPlanoInferior[0], verticesPlanoInferior[1]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[2].x, medio[2].y + altopinturas, medio[2].z), 90f, 2, "pintura");
+
+                medio[3] = puntoMedioZ(verticesPlanoInferior[2], verticesPlanoInferior[3]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[3].x, medio[3].y + altopinturas, medio[3].z), -90f, 3, "pintura");
+                break;
+            case 5:
+                medio[0] = puntoMedioZ(verticesPlanoSuperior[0], verticesPlanoSuperior[1]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x, medio[0].y + altopinturas, medio[0].z), 90f, 0, "pintura");
+
+                medio[1] = puntoMedioZ(verticesPlanoSuperior[2], verticesPlanoSuperior[3]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[1].x, medio[1].y + altopinturas, medio[1].z), -90f, 1, "pintura");
+
+                medio[2] = puntoMedioZ(verticesPlanoInferior[0], verticesPlanoInferior[1]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[2].x, medio[2].y + altopinturas, medio[2].z), 90f, 2, "pintura");
+
+                medio[3] = puntoMedioZ(verticesPlanoInferior[2], verticesPlanoInferior[3]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[3].x, medio[3].y + altopinturas, medio[3].z), -90f, 3, "pintura");
+
+                medio[4] = puntoMedioX(verticesPlanoSuperior[0], verticesPlanoSuperior[2]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[4].x, medio[4].y + altopinturas, medio[4].z), 0f, 4, "pintura");
+                break;
+            case 6:
+                medio[0] = puntoMedioZ(verticesPlanoSuperior[0], verticesPlanoSuperior[1]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[0].x, medio[0].y + altopinturas, medio[0].z), 90f, 0, "pintura");
+
+                medio[1] = puntoMedioZ(verticesPlanoSuperior[2], verticesPlanoSuperior[3]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[1].x, medio[1].y + altopinturas, medio[1].z), -90f, 1, "pintura");
+
+                medio[2] = puntoMedioZ(verticesPlanoInferior[0], verticesPlanoInferior[1]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[2].x, medio[2].y + altopinturas, medio[2].z), 90f, 2, "pintura");
+
+                medio[3] = puntoMedioZ(verticesPlanoInferior[2], verticesPlanoInferior[3]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[3].x, medio[3].y + altopinturas, medio[3].z), -90f, 3, "pintura");
+
+                medio[4] = puntoMedioX(verticesPlanoSuperior[0], verticesPlanoSuperior[2]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[4].x, medio[4].y + altopinturas, medio[4].z), 0f, 4, "pintura");
+               
+                medio[5] = puntoMedioX(verticesPlanoInferior[0], verticesPlanoInferior[2]);
+                DatosUsuario.Instance.addPosicionObra(new Vector3(medio[5].x, medio[5].y + altopinturas, medio[5].z), 0f, 5, "pintura");
+                
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
             default:
                 break;
         }
 
-        Vector3[] medioE=new Vector3[10];
+        Vector3[] medioE = new Vector3[10];
         switch (cantidadEsculturas)
         {
             case 1:
-				// Si hay una escultura se pone abajo
-				medioE[0]=puntoMedio(verticesPlanoInferior);
+                // Si hay una escultura se pone abajo
+                medioE[0] = puntoMedio(verticesPlanoInferior);
                 DatosUsuario.Instance.addPosicionObra(medioE[0], 0f, 0, "escultura");
+                break;
+            case 2:
+                medioE[0] = puntoMedio(verticesPlanoInferior);
+                DatosUsuario.Instance.addPosicionObra(medioE[0], 0f, 0, "escultura");
+
+                medioE[1] = puntoMedio(verticesPlanoSuperior);
+                DatosUsuario.Instance.addPosicionObra(medioE[1], 0f, 1, "escultura");
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
                 break;
             default:
                 break;
         }
-		DatosUsuario.Instance.datosCompletos=true;
-		
+        DatosUsuario.Instance.datosCompletos = true;
+
     }
 
     private Vector3 puntoMedioX(Vector3 vertice2, Vector3 vertice0)

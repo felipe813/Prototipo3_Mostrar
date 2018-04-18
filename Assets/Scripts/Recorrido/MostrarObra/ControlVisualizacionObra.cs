@@ -8,6 +8,7 @@ public class ControlVisualizacionObra : MonoBehaviour
     {
         Obra obraActual = DatosUsuario.Instance.buscarObra(ObraActual.Instance.idObraActual);
         GameObject.Find("UI").GetComponent<ControlVisibilidadCanvasObra>().activarCanvas();
+        GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[1].activarCanvas();
         bool esPintura;
         if (obraActual.tipo.Equals("escultura"))
         {
@@ -21,8 +22,8 @@ public class ControlVisualizacionObra : MonoBehaviour
 
         }
         GameObject txt_titulo = GameObject.Find("txt_titulo");
-        GameObject cronometro = GameObject.Find("Cronometro");
-        cronometro.GetComponent<ControlTiempo>().tiempo = obraActual.tiempoSegundos;
+        //GameObject cronometro = GameObject.Find("Cronometro");
+        //cronometro.GetComponent<ControlTiempo>().tiempo = obraActual.tiempoSegundos;
         if (obraActual.calificacion != 0)
         {
             Debug.Log("Entroo "+obraActual.calificacion);

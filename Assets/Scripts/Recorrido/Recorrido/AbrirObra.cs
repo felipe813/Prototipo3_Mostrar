@@ -8,6 +8,7 @@ public class AbrirObra : MonoBehaviour
 	{
 		GameObject.Find ("Avatar").SetActive(false);
         GameObject.Find("CanvasIntroduccion").GetComponent<ControlVisibilidadCanvas>().activarCanvas();
+        GameObject.Find ("ControlCamara").GetComponent<ControlCamaraSeguimiento>().seguirPersonaje=false;
         ObraActual.Instance.idObraActual = id;
     }
     public int id

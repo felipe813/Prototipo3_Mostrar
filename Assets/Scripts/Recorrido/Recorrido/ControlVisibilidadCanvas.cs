@@ -7,6 +7,7 @@ public class ControlVisibilidadCanvas : MonoBehaviour {
 
 	// Use this for initialization
 	public Canvas canvas;
+	
 	void Start () {
 		desactivarCanvas();
 	}

@@ -51,6 +51,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\AgentLinkMover.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\ClickToMove.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\DestroyOnTrigger.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\DungeonManager.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\EnableIffSleeping.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\FreeCam.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\LocalNavMeshBuilder.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\MeshTool.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\NavMeshPrefabInstance.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\NavMeshSourceTag.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\Oscillator.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\RandomInstancing.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\RandomWalk.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\SpawnPrefabOnKeyDown.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceAgentTests.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceLinkTests.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceModifierTests.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceModifierVolumeTests.cs" />
+     <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceTests.cs" />
      <Compile Include="Assets\Scripts\Datos\DatosUsuario.cs" />
      <Compile Include="Assets\Scripts\Datos\Obra.cs" />
      <Compile Include="Assets\Scripts\Datos\ObraActual.cs" />
@@ -67,8 +90,11 @@
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\AbrirObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\AcomodarObras.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\CargarObras.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\CerrarObra.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlCamaraSeguimiento.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlColisionAvatar.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlVisibilidadCanvas.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\NavMeshDinamico.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\PlayerNavigation.cs" />
      <Compile Include="Assets\Scripts\SceneLoader\SceneLoader.cs" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyIO.cginc" />
@@ -85,6 +111,7 @@
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCasterSetup.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardBaseSetup.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonLight.cginc" />
+     <None Include="Assets\Herramientas\NavMeshComponents-master\ProjectSettings\ProjectVersion.txt" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFree.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForward.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonV.cginc" />
