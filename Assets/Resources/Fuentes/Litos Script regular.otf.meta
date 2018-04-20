@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d5c2b968addd66f4aa723457e4950aaf
+timeCreated: 1524118755
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Litos Script
+  fontNames:
+  - Litos Script
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

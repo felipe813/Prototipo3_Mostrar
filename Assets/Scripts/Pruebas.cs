@@ -6,71 +6,65 @@ public class Pruebas : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		string direccionLocalEsculturas="C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Creacion/AssetBundles/StandaloneWindows/";
+		string direccionWebEsculturas="ftp://pruebarealidadaumentada:contrasenia@files.000webhost.com/Prototipo_3/Esculturas/";
+		string direccionLocalPinturas="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/";
+		string direccionWebPinturas="ftp://pruebarealidadaumentada:contrasenia@files.000webhost.com/Prototipo_3/Pinturas/";
+		string direccionEsculturas=direccionWebEsculturas;
+		string dreccionPinturas=direccionWebPinturas;
+
 		DatosUsuario.Instance.nombreUsuario="Andrés Sánchez";
 		DatosUsuario.Instance.idUsuario="123";
 		DatosUsuario.Instance.obras=new List<Obra>();
 
-		DatosUsuario.Instance.obras.Add(new Obra("Amphitrite",1));
-		DatosUsuario.Instance.obras[0].id=1;
-		DatosUsuario.Instance.obras[0].nombre="Amphitrite";
-		DatosUsuario.Instance.obras[0].calificada=false;
-		DatosUsuario.Instance.obras[0].url="C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Creacion/AssetBundles/StandaloneWindows/obra1";
-		DatosUsuario.Instance.obras[0].tipo="escultura";
-		DatosUsuario.Instance.obras[0].posicion=new Vector3(50,-35,50);
-		DatosUsuario.Instance.obras[0].anguloRotacion=30;
+		Obra obra= new Obra("Amphitrite",1);
+		obra.calificada=false;
+		obra.url=direccionEsculturas+"obra1";
+		obra.tipo="escultura";
+		obra.audios.Add(new ElementoMultimedia("Audio1","Audios 1"));
+		obra.videos.Add(new ElementoMultimedia("Video1","Video 1"));
+		obra.audios.Add(new ElementoMultimedia("Audio2","Audios 2"));
+		DatosUsuario.Instance.obras.Add(obra);
 
-		
-		
-		DatosUsuario.Instance.obras.Add(new Obra("Gioconda",10));
-		DatosUsuario.Instance.obras[1].id=10;
-		DatosUsuario.Instance.obras[1].nombre="Gioconda";
-		DatosUsuario.Instance.obras[1].calificada=false;
-		DatosUsuario.Instance.obras[1].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/La Gioconda.jpg";
-		DatosUsuario.Instance.obras[1].tipo="pintura";
-		DatosUsuario.Instance.obras[1].posicion=new Vector3(130,10,0);
-		DatosUsuario.Instance.obras[1].anguloRotacion=90;
+		obra= new Obra("Gioconda",100);
+		obra.url=dreccionPinturas+"La Gioconda.jpg";
+		obra.tipo="pintura";
+		DatosUsuario.Instance.obras.Add(obra);
 
-		DatosUsuario.Instance.obras.Add(new Obra("El Beso",3));
-		DatosUsuario.Instance.obras[2].id=3;
-		DatosUsuario.Instance.obras[2].nombre="El Beso";
-		DatosUsuario.Instance.obras[2].calificada=false;
-		DatosUsuario.Instance.obras[2].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El beso.jpg";
-		DatosUsuario.Instance.obras[2].tipo="pintura";
-		DatosUsuario.Instance.obras[2].posicion=new Vector3(-75,-25,0);
-		DatosUsuario.Instance.obras[2].anguloRotacion=-90;
+		obra= new Obra("El Beso",101);
+		obra.url=dreccionPinturas+"El beso.jpg";
+		obra.tipo="pintura";
+		DatosUsuario.Instance.obras.Add(obra);
 
-		DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",6));
-		DatosUsuario.Instance.obras[3].calificada=false;
-		DatosUsuario.Instance.obras[3].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
-		DatosUsuario.Instance.obras[3].tipo="pintura";
+		obra= new Obra("El hijo del hombre",102);
+		obra.url=dreccionPinturas+"El hijo del hombre.jpg";
+		obra.tipo="pintura";
+		DatosUsuario.Instance.obras.Add(obra);
 
-		DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",7));
-		DatosUsuario.Instance.obras[4].calificada=false;
-		DatosUsuario.Instance.obras[4].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
-		DatosUsuario.Instance.obras[4].tipo="pintura";
+		obra= new Obra("El hijo del hombre",103);
+		obra.url=dreccionPinturas+"El hijo del hombre.jpg";
+		obra.tipo="pintura";
+		DatosUsuario.Instance.obras.Add(obra);
 
-		DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",8));
-		DatosUsuario.Instance.obras[5].calificada=false;
-		DatosUsuario.Instance.obras[5].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
-		DatosUsuario.Instance.obras[5].tipo="pintura";
+		obra= new Obra("El hijo del hombre",104);
+		obra.url=dreccionPinturas+"El hijo del hombre.jpg";
+		obra.tipo="pintura";
+		DatosUsuario.Instance.obras.Add(obra);
 
-				DatosUsuario.Instance.obras.Add(new Obra("El hijo del hombre",9));
-		DatosUsuario.Instance.obras[6].calificada=false;
-		DatosUsuario.Instance.obras[6].url="C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/El hijo del hombre.jpg";
-		DatosUsuario.Instance.obras[6].tipo="pintura";
+		obra= new Obra("El hijo del hombre",105);
+		obra.url=dreccionPinturas+"El hijo del hombre.jpg";
+		obra.tipo="pintura";
+		DatosUsuario.Instance.obras.Add(obra);
 
-		DatosUsuario.Instance.obras.Add(new Obra("Borghese vase",2));
-		DatosUsuario.Instance.obras[7].calificada=false;
-		DatosUsuario.Instance.obras[7].url="C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Creacion/AssetBundles/StandaloneWindows/obra2";
-		DatosUsuario.Instance.obras[7].tipo="escultura";
-
+		obra= new Obra("Borghese vase",3);
+		obra.url=direccionEsculturas+"obra3";
+		obra.tipo="escultura";
+		DatosUsuario.Instance.obras.Add(obra);
 
 		GameObject acomodarObras = GameObject.Find ("AcomodarObras");
 		AcomodarObras script=acomodarObras.GetComponent<AcomodarObras> ();
 		StartCoroutine(script.acomodarObras());
-
-		
-
 
 	}
 }

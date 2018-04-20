@@ -13,11 +13,16 @@ public class Obra
     private Vector3 _posicion;
     private string _tipo;
     private float _anguloRotacion;
+
+    private List<ElementoMultimedia> _videos;
+    private List<ElementoMultimedia> _audios;
     public Obra(string nuevoNombre, int nuevoId)
     {
         _nombre = nuevoNombre;
         _id = nuevoId;
         _calificada = false;
+        _videos=new List<ElementoMultimedia>();
+        _audios=new List<ElementoMultimedia>();
     }
     public int id
     {
@@ -70,5 +75,15 @@ public class Obra
     {
         get{return _anguloRotacion;}
         set{ _anguloRotacion=value;}
+    }
+    public List<ElementoMultimedia> audios
+    {
+        get{return _audios;}
+        set{ _audios=value;}
+    }
+    public List<ElementoMultimedia> videos
+    {
+        get{return _videos;}
+        set{ _videos=value;}
     }
 }

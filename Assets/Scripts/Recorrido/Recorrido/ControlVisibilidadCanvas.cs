@@ -13,6 +13,7 @@ public class ControlVisibilidadCanvas : MonoBehaviour {
 	}
 
 	public void activarCanvas(){
+		//Debug.Log("Se activo canvas :"+canvas.gameObject.name);
 		this.canvas.gameObject.SetActive(true);
 	}
 

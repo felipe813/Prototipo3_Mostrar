@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: cd1be04acc6122649a3808f23353d2cc
+timeCreated: 1524118755
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gladifilthefte
+  fontNames:
+  - Gladifilthefte
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

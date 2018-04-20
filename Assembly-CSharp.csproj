@@ -51,6 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Herramientas\InAppBrowser\Example\BrowserOpener.cs" />
+     <Compile Include="Assets\Herramientas\InAppBrowser\Example\JSExecute.cs" />
+     <Compile Include="Assets\Herramientas\InAppBrowser\Example\LocalFileOpener.cs" />
+     <Compile Include="Assets\Herramientas\InAppBrowser\Scripts\InAppBrowser.cs" />
+     <Compile Include="Assets\Herramientas\InAppBrowser\Scripts\InAppBrowserBridge.cs" />
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\AgentLinkMover.cs" />
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\ClickToMove.cs" />
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Examples\Scripts\DestroyOnTrigger.cs" />
@@ -75,6 +80,7 @@
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceModifierVolumeTests.cs" />
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceTests.cs" />
      <Compile Include="Assets\Scripts\Datos\DatosUsuario.cs" />
+     <Compile Include="Assets\Scripts\Datos\ElementoMultimedia.cs" />
      <Compile Include="Assets\Scripts\Datos\Obra.cs" />
      <Compile Include="Assets\Scripts\Datos\ObraActual.cs" />
      <Compile Include="Assets\Scripts\MantenerDatosEntreEscenas\ProjectVars.cs" />
@@ -85,6 +91,8 @@
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlTiempo.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlVisibilidadCanvasObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlVisualizacionObra.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\InicializarElementoMultimedia.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\NavegabilidadCanvas.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\TransformacionObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\UI_HoldButton.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\AbrirObra.cs" />
