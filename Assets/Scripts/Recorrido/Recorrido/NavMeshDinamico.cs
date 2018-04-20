@@ -14,10 +14,10 @@ public class NavMeshDinamico : MonoBehaviour
         GameObject.Find("RamplaIzquierdaInferior").SetActive(false);
         GameObject.Find("RamplaDerechaSuperior").SetActive(false);
         GameObject.Find("RamplaDerechaInferior").SetActive(false);
-        GameObject espacioObra=GameObject.Find("EspacioObra");
+        /* GameObject espacioObra=GameObject.Find("EspacioObra");
         while(espacioObra!=null){
             espacioObra.SetActive(false);
             espacioObra=GameObject.Find("EspacioObra");
-        }
+        } */
     }
 }

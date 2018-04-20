@@ -18,9 +18,9 @@ public class Pruebas : MonoBehaviour {
 		DatosUsuario.Instance.idUsuario="123";
 		DatosUsuario.Instance.obras=new List<Obra>();
 
-		Obra obra= new Obra("Amphitrite",1);
+		Obra obra= new Obra("Amphitrite",5);
 		obra.calificada=false;
-		obra.url=direccionEsculturas+"obra1";
+		obra.url=direccionEsculturas+"obra5";
 		obra.tipo="escultura";
 		obra.audios.Add(new ElementoMultimedia("Audio1","Audios 1"));
 		obra.videos.Add(new ElementoMultimedia("Video1","Video 1"));
@@ -57,8 +57,8 @@ public class Pruebas : MonoBehaviour {
 		obra.tipo="pintura";
 		DatosUsuario.Instance.obras.Add(obra);
 
-		obra= new Obra("Borghese vase",3);
-		obra.url=direccionEsculturas+"obra3";
+		obra= new Obra("Borghese vase",4);
+		obra.url=direccionEsculturas+"obra4";
 		obra.tipo="escultura";
 		DatosUsuario.Instance.obras.Add(obra);
 

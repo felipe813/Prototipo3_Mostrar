@@ -5,8 +5,10 @@ public class CargarObras : MonoBehaviour
 {
     private int cantidadObrasCargadas;
     private int cantidadObras;
+    private bool isBake;
     void Start()
     {
+        isBake = false;
         cantidadObrasCargadas = 0;
         StartCoroutine(cargar());
     }
@@ -29,50 +31,112 @@ public class CargarObras : MonoBehaviour
         string tipo = DatosUsuario.Instance.obras[index].tipo;
         if (tipo.Equals("escultura"))
         {
+
+            while (!Caching.ready)
+                yield return null;
+
+            //WWW www = WWW.LoadFromCacheOrDownload(url, 1);
+            // yield return www;
             WWW www = new WWW(url);
             while (!www.isDone)
             {
                 yield return null;
             }
-            AssetBundle obra = www.assetBundle;
-            GameObject mya = obra.LoadAsset("Obra") as GameObject;
-            GameObject obraPresentada = Instantiate(mya);
-            GameObject modelo3D = GameObject.Find("Modelo" + DatosUsuario.Instance.obras[index].id);
-           // GameObject modelo3D = GameObject.Find("Modelo");
-            GameObject obraPrincipal = modelo3D.transform.GetChild(0).gameObject;
+            if (!string.IsNullOrEmpty(www.error))
+            {
+                Debug.Log(www.error +" : "+ url);
+                cantidadObras--;
+                yield return null;
+            }
+            else
+            {
+                AssetBundle obra = www.assetBundle;
+                GameObject mya = obra.LoadAsset("Obra") as GameObject;
+                obra.Unload(false);
+                GameObject obraPresentada = Instantiate(mya);
+                GameObject modelo3D = GameObject.Find("Modelo" + DatosUsuario.Instance.obras[index].id);
+                // GameObject modelo3D = GameObject.Find("Modelo");
+                GameObject obraPrincipal = modelo3D.transform.GetChild(0).gameObject;
 
-            obraPrincipal.AddComponent<AbrirObra>();
-            obraPrincipal.GetComponent<AbrirObra>().id = DatosUsuario.Instance.obras[index].id;
-            obraPresentada.transform.position = DatosUsuario.Instance.obras[index].posicion;
-            GameObject contenedorObra = GameObject.Find("Obras");
-            obraPresentada.transform.parent = contenedorObra.transform;
-            obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
-            cantidadObrasCargadas++;
+                obraPrincipal.AddComponent<AbrirObra>();
+                obraPrincipal.GetComponent<AbrirObra>().id = DatosUsuario.Instance.obras[index].id;
+                obraPresentada.transform.position = DatosUsuario.Instance.obras[index].posicion;
+                GameObject contenedorObra = GameObject.Find("Obras");
+                obraPresentada.transform.parent = contenedorObra.transform;
+                obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
+
+                GameObject.Find("EspacioObra").SetActive(false);
+
+                cantidadObrasCargadas++;
+
+            }
             if (cantidadObrasCargadas == cantidadObras)
             {
+                isBake = true;
                 GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
             }
+            /* WWW www = new WWW(url);
+            while (!www.isDone)
+            {
+                yield return null;
+            } */
+            /*  AssetBundle obra = www.assetBundle;
+             GameObject mya = obra.LoadAsset("Obra") as GameObject;
+             obra.Unload(false);
+             GameObject obraPresentada = Instantiate(mya);
+             GameObject modelo3D = GameObject.Find("Modelo" + DatosUsuario.Instance.obras[index].id);
+             // GameObject modelo3D = GameObject.Find("Modelo");
+             GameObject obraPrincipal = modelo3D.transform.GetChild(0).gameObject;
+
+             obraPrincipal.AddComponent<AbrirObra>();
+             obraPrincipal.GetComponent<AbrirObra>().id = DatosUsuario.Instance.obras[index].id;
+             obraPresentada.transform.position = DatosUsuario.Instance.obras[index].posicion;
+             GameObject contenedorObra = GameObject.Find("Obras");
+             obraPresentada.transform.parent = contenedorObra.transform;
+             obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
+
+             GameObject.Find("EspacioObra").SetActive(false);
+
+             cantidadObrasCargadas++;
+             if (cantidadObrasCargadas == cantidadObras)
+             {
+                 GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
+             } */
         }
         else if (tipo.Equals("pintura"))
         {
-            GameObject cuadro = (GameObject)Resources.Load("Prefabs/Obra") as GameObject;
-            GameObject obraPresentada = Instantiate(cuadro, transform);
-            GameObject contenedorObra = GameObject.Find("Obras");
-            obraPresentada.transform.parent = contenedorObra.transform;
-            obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
-            obraPresentada.transform.position = DatosUsuario.Instance.obras[index].posicion;
+
             using (WWW www = new WWW(url))
             {
                 yield return www;
-                //GameObject marco = GameObject.Find("Cuadro");
-                GameObject marco = obraPresentada.transform.Find("Cuadro").gameObject;
-                marco.AddComponent<AbrirObra>();
-                //Debug.Log ("Se le agrego a el cuadro "+DatosUsuario.Instance.obras[index].id+" el script.");
-                marco.GetComponent<AbrirObra>().id = DatosUsuario.Instance.obras[index].id;
-                marco.GetComponent<Renderer>().material.mainTexture = www.texture;
-                cantidadObrasCargadas++;
+                if (!string.IsNullOrEmpty(www.error))
+                {
+                    Debug.Log(www.error +" : "+ url);
+                    cantidadObras--;
+                    yield return null;
+                }
+                else
+                {
+
+                    GameObject cuadro = (GameObject)Resources.Load("Prefabs/Obra") as GameObject;
+                    GameObject obraPresentada = Instantiate(cuadro, transform);
+                    GameObject contenedorObra = GameObject.Find("Obras");
+                    obraPresentada.transform.parent = contenedorObra.transform;
+                    obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
+                    obraPresentada.transform.position = DatosUsuario.Instance.obras[index].posicion;
+
+                    //GameObject marco = GameObject.Find("Cuadro");
+                    GameObject marco = obraPresentada.transform.Find("Cuadro").gameObject;
+                    marco.AddComponent<AbrirObra>();
+                    //Debug.Log ("Se le agrego a el cuadro "+DatosUsuario.Instance.obras[index].id+" el script.");
+                    marco.GetComponent<AbrirObra>().id = DatosUsuario.Instance.obras[index].id;
+                    marco.GetComponent<Renderer>().material.mainTexture = www.texture;
+                    cantidadObrasCargadas++;
+
+                }
                 if (cantidadObrasCargadas == cantidadObras)
                 {
+                    isBake = true;
                     GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
                 }
             }
