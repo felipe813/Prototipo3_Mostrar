@@ -2,9 +2,9 @@
  using System.Collections;
  using UnityEngine.SceneManagement;
  
- public class SceneLoader: MonoBehaviour {
+ public static class SceneLoader {
  
-      public void LoadScene(string escena)
+      public static void LoadScene(string escena)
       { 
          //Application.LoadLevel(level);
 		 SceneManager.LoadScene(escena);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElementoMultimedia : MonoBehaviour {
+public class ElementoMultimedia {
 
 	private string _urlMultimedia;
 	private string _nombreMultimedia;

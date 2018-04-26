@@ -3,6 +3,7 @@ using UnityEngine;
 public class DatosUsuario : Singleton<DatosUsuario>
 {
     public string idUsuario;
+    public int idRecorrido;
     public string nombreUsuario;
     public List<Obra> obras;
     public bool datosCompletos;
@@ -44,7 +45,6 @@ public class DatosUsuario : Singleton<DatosUsuario>
         Obra retorno=null;
         for (int i = 0; i < obras.Count; i++)
         {
-            Debug.Log("Comparo "+obras[i].id+" con "+idObra);
             if(obras[i].id==idObra){
                 retorno=obras[i];
                 break;
@@ -74,8 +74,8 @@ public class DatosUsuario : Singleton<DatosUsuario>
         for (int i = 0; i < obras.Count; i++)
         {
             Debug.Log("La obra No "+obras[i].id+" llamada <"+obras[i].nombre+"> tiene una calificación de "
-			+obras[i].calificacion+", su estado de calificacion es "+obras[i].calificada+" y se ha visto por "+
-            obras[i].tiempoSegundos+" segundos.");
+			+obras[i].calificacion+", su estado de calificacion es "+obras[i].calificada+", se ha visto por "+
+            obras[i].tiempoSegundos+" segundos y su recomendacion es "+obras[i].favorita);
         }
     }
 }

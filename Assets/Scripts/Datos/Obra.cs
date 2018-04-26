@@ -13,16 +13,19 @@ public class Obra
     private Vector3 _posicion;
     private string _tipo;
     private float _anguloRotacion;
+    private int _idObraRecorrido;
 
     private List<ElementoMultimedia> _videos;
     private List<ElementoMultimedia> _audios;
+    private Informacion _informacion;
     public Obra(string nuevoNombre, int nuevoId)
     {
         _nombre = nuevoNombre;
         _id = nuevoId;
         _calificada = false;
-        _videos=new List<ElementoMultimedia>();
-        _audios=new List<ElementoMultimedia>();
+        _videos = new List<ElementoMultimedia>();
+        _audios = new List<ElementoMultimedia>();
+        _informacion=new Informacion();
     }
     public int id
     {
@@ -58,32 +61,42 @@ public class Obra
 
     public bool favorita
     {
-        get{return _favorita;}
-        set{ _favorita=value;}
+        get { return _favorita; }
+        set { _favorita = value; }
     }
     public Vector3 posicion
     {
-        get{return _posicion;}
-        set{ _posicion=value;}
+        get { return _posicion; }
+        set { _posicion = value; }
     }
     public string tipo
     {
-        get{return _tipo;}
-        set{ _tipo=value;}
+        get { return _tipo; }
+        set { _tipo = value; }
     }
     public float anguloRotacion
     {
-        get{return _anguloRotacion;}
-        set{ _anguloRotacion=value;}
+        get { return _anguloRotacion; }
+        set { _anguloRotacion = value; }
     }
     public List<ElementoMultimedia> audios
     {
-        get{return _audios;}
-        set{ _audios=value;}
+        get { return _audios; }
+        set { _audios = value; }
     }
     public List<ElementoMultimedia> videos
     {
-        get{return _videos;}
-        set{ _videos=value;}
+        get { return _videos; }
+        set { _videos = value; }
+    }
+    public int idObraRecorrido
+    {
+        get { return _idObraRecorrido; }
+        set { _idObraRecorrido = value; }
+    }
+
+    public Informacion informacion{
+         get { return _informacion; }
+        set { _informacion = value; }
     }
 }

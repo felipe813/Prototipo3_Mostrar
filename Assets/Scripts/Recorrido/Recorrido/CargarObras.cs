@@ -32,8 +32,8 @@ public class CargarObras : MonoBehaviour
         if (tipo.Equals("escultura"))
         {
 
-            while (!Caching.ready)
-                yield return null;
+            //while (!Caching.ready)
+            //    yield return null;
 
             //WWW www = WWW.LoadFromCacheOrDownload(url, 1);
             // yield return www;
@@ -56,6 +56,7 @@ public class CargarObras : MonoBehaviour
                 GameObject obraPresentada = Instantiate(mya);
                 GameObject modelo3D = GameObject.Find("Modelo" + DatosUsuario.Instance.obras[index].id);
                 // GameObject modelo3D = GameObject.Find("Modelo");
+                
                 GameObject obraPrincipal = modelo3D.transform.GetChild(0).gameObject;
 
                 obraPrincipal.AddComponent<AbrirObra>();
@@ -64,8 +65,9 @@ public class CargarObras : MonoBehaviour
                 GameObject contenedorObra = GameObject.Find("Obras");
                 obraPresentada.transform.parent = contenedorObra.transform;
                 obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
+                obraPresentada.transform.localScale=new Vector3(2,2,2);
 
-                GameObject.Find("EspacioObra").SetActive(false);
+                //GameObject.Find("EspacioObra").SetActive(false);
 
                 cantidadObrasCargadas++;
 

@@ -8,13 +8,17 @@ public class TransformacionObra : MonoBehaviour
     private Quaternion rotacionInicial;
     private Vector3 escalaInicial;
     private Vector3 posicionInicial;
-    public void ActualizarObra(int idObra)
+    public void ActualizarObra()
     {
-        modelo3D = GameObject.Find("Modelo"+idObra);
-        obra = modelo3D.transform.GetChild(0).gameObject;
-        rotacionInicial = obra.transform.rotation;
-        escalaInicial = obra.transform.localScale;
-        posicionInicial = obra.transform.position;
+        modelo3D = GameObject.Find("Modelo" + ObraActual.Instance.idObraActual);
+        if (modelo3D != null)
+        {
+            obra = modelo3D.transform.GetChild(0).gameObject;
+            rotacionInicial = obra.transform.rotation;
+            escalaInicial = obra.transform.localScale;
+            posicionInicial = obra.transform.position;
+        }
+
     }
     public void AumentarDimension()
     {
@@ -50,7 +54,11 @@ public class TransformacionObra : MonoBehaviour
     }
     public void Reset()
     {
-        obra.transform.SetPositionAndRotation(posicionInicial, rotacionInicial);
-        obra.transform.localScale = escalaInicial;
+        if (obra != null)
+        {
+            obra.transform.SetPositionAndRotation(posicionInicial, rotacionInicial);
+            obra.transform.localScale = escalaInicial;
+        }
+
     }
 }

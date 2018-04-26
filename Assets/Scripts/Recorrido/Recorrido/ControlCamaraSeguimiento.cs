@@ -13,6 +13,7 @@ public class ControlCamaraSeguimiento : MonoBehaviour
     void Start()
     {
 		distanciaCamara=new Vector3(0,60,-60);
+        //distanciaCamara=new Vector3(0,120,-120);
 		rotacionCamara=new Vector3(24,0,0);
         _seguirPersonaje = true;
     }
@@ -25,7 +26,7 @@ public class ControlCamaraSeguimiento : MonoBehaviour
 			Vector3 cambioPorAngulo = new Vector3(distanciaCamara.z * Mathf.Sin(anguloRotacionY), distanciaCamara.y, distanciaCamara.z * Mathf.Cos(anguloRotacionY));
 			camaraPrincipal.transform.position=avatar.transform.position+cambioPorAngulo;
 			camaraPrincipal.transform.eulerAngles=avatar.transform.eulerAngles+rotacionCamara;
-			Debug.Log("Entro");
+			
 			//_seguirPersonaje=false;
         }
     }

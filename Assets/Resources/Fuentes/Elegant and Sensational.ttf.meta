@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 91c142d5877dee74ba107e0d0a912770
+timeCreated: 1524581548
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Elegant and Sensational
+  fontNames:
+  - Elegant and Sensational
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

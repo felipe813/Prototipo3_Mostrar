@@ -26,17 +26,19 @@ public class ControlCamaras : MonoBehaviour
 
     public void activarCamaraObra(Vector3 posicion, float anguloRotacionX, bool esPintura)
     {
-        float distanciaCamaraAObra = -30f;
+        float distanciaCamaraAObra;
         Vector3 anguloRotacion = new Vector3(0, anguloRotacionX, 0);
         anguloRotacionX = (float)(anguloRotacionX * Mathf.PI / 180.0);
         Vector3 alturaCamara;
         if (esPintura)
         {
             alturaCamara = new Vector3(0f, 0f, 0f);
+            distanciaCamaraAObra = -30f;
         }
         else
         {
-            alturaCamara = new Vector3(0f, 9f, 0f);
+            alturaCamara = new Vector3(0f, 18f, 0f);
+            distanciaCamaraAObra = -60f;
         }
         Vector3 cambioPorAngulo = new Vector3(distanciaCamaraAObra * Mathf.Sin(anguloRotacionX), 0f, distanciaCamaraAObra * Mathf.Cos(anguloRotacionX));
         Vector3 posicionFinal = posicion + cambioPorAngulo + alturaCamara;
