@@ -14,7 +14,6 @@ public class ServicioREST
 
         using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
         {
-            Debug.Log(json);
             streamWriter.Write(json);
         }
         var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();

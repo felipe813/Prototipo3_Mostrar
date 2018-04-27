@@ -90,10 +90,11 @@
      <Compile Include="Assets\Scripts\Inicio\CalendarController.cs" />
      <Compile Include="Assets\Scripts\Inicio\CalendarDateItem.cs" />
      <Compile Include="Assets\Scripts\Inicio\ControlLogin.cs" />
-     <Compile Include="Assets\Scripts\Inicio\Login.cs" />
+     <Compile Include="Assets\Scripts\Inicio\ControlRegistro.cs" />
      <Compile Include="Assets\Scripts\Inicio\NavegabilidadCanvasInicio.cs" />
      <Compile Include="Assets\Scripts\Inicio\PruebaREST.cs" />
      <Compile Include="Assets\Scripts\Inicio\ServicioREST.cs" />
+     <Compile Include="Assets\Scripts\Inicio\TiposLogueo.cs" />
      <Compile Include="Assets\Scripts\Introduccion\CargarDatos.cs" />
      <Compile Include="Assets\Scripts\MantenerDatosEntreEscenas\ProjectVars.cs" />
      <Compile Include="Assets\Scripts\MantenerDatosEntreEscenas\Singleton.cs" />
