@@ -80,6 +80,39 @@
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceModifierVolumeTests.cs" />
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceTests.cs" />
      <Compile Include="Assets\Herramientas\SimpleJSON\SimpleJSON.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Resources\Imagenes\Inicio\gif\GIF.cs" />
      <Compile Include="Assets\Scripts\Datos\DatosUsuario.cs" />
      <Compile Include="Assets\Scripts\Datos\DetalleInformacion.cs" />
@@ -96,6 +129,7 @@
      <Compile Include="Assets\Scripts\Inicio\ServicioREST.cs" />
      <Compile Include="Assets\Scripts\Inicio\TiposLogueo.cs" />
      <Compile Include="Assets\Scripts\Introduccion\CargarDatos.cs" />
+     <Compile Include="Assets\Scripts\Introduccion\ControlRecorrido.cs" />
      <Compile Include="Assets\Scripts\MantenerDatosEntreEscenas\ProjectVars.cs" />
      <Compile Include="Assets\Scripts\MantenerDatosEntreEscenas\Singleton.cs" />
      <Compile Include="Assets\Scripts\Pruebas.cs" />
@@ -114,22 +148,45 @@
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\CerrarObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlCamaraSeguimiento.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlColisionAvatar.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlElementosInformacion.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlVisibilidadCanvas.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\NavMeshDinamico.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\PlayerNavigation.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\PreparacionEscenario.cs" />
      <Compile Include="Assets\Scripts\SceneLoader\SceneLoader.cs" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyIO.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFreeOutlineOnly.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlySetup.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonInc.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyBase.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCasterIO.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardAddSetup.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFreeMobile.shader" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonDef.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Surface\MKToonSurfaceIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCasterSetup.cginc" />
+     <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardBaseSetup.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonLight.cginc" />
      <None Include="Assets\Herramientas\NavMeshComponents-master\ProjectSettings\ProjectVersion.txt" />
@@ -158,6 +215,12 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.1-Editor">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.1-Runtime">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

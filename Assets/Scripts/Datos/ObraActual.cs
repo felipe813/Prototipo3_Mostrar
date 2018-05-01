@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObraActual : Singleton<ObraActual>
 {
 
-	public int idObraActual=0;
+	public string idObraActual="";
 
     public static ObraActual Instance
 	{

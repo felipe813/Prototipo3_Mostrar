@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class AbrirObra : MonoBehaviour
 {
-    private int _id;
+    private string _id;
     public void abrirObra()
 	{
 		GameObject.Find ("Avatar").SetActive(false);
@@ -11,7 +11,7 @@ public class AbrirObra : MonoBehaviour
         GameObject.Find ("ControlCamara").GetComponent<ControlCamaraSeguimiento>().seguirPersonaje=false;
         ObraActual.Instance.idObraActual = id;
     }
-    public int id
+    public string id
     {
         get { return _id; }
         set { _id = value; }

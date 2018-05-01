@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Escena_Introduccion.unity
     guid: 603c3b6ae26304648a3287a1543030d8
+  - enabled: 1
+    path: Assets/Escenas/Escena_Museo.unity
+    guid: 8e6138a7a54e63e4dacea707295c362d

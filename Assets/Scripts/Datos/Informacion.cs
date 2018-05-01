@@ -12,5 +12,8 @@ public class Informacion {
 		get { return _informaion; }
         set { _informaion = value; }
 	}
+	public int cantidadDetalles(){
+		return _informaion.Count;
+	}
 
 }

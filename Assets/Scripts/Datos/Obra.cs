@@ -4,7 +4,7 @@ using UnityEngine;
 public class Obra
 {
     private string _nombre;
-    private int _id;
+    private string _id;
     private int _calificacion;
     private int _tiempoSegundos;
     private bool _calificada;
@@ -18,7 +18,7 @@ public class Obra
     private List<ElementoMultimedia> _videos;
     private List<ElementoMultimedia> _audios;
     private Informacion _informacion;
-    public Obra(string nuevoNombre, int nuevoId)
+    public Obra(string nuevoNombre, string nuevoId)
     {
         _nombre = nuevoNombre;
         _id = nuevoId;
@@ -27,7 +27,7 @@ public class Obra
         _audios = new List<ElementoMultimedia>();
         _informacion=new Informacion();
     }
-    public int id
+    public string id
     {
         get { return _id; }
         set { _id = value; }

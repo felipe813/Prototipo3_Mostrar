@@ -8,6 +8,7 @@ public class ControlVisualizacionObra : MonoBehaviour
     {
         //Canvas Visualizacion
         Obra obraActual = DatosUsuario.Instance.buscarObra(ObraActual.Instance.idObraActual);
+        GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[3].activarCanvas();
         GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[2].activarCanvas();
         GameObject.Find("UI").GetComponent<ControlVisibilidadCanvasObra>().activarCanvas();
         GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[1].activarCanvas();
@@ -51,8 +52,8 @@ public class ControlVisualizacionObra : MonoBehaviour
             GameObject.DestroyImmediate(GameObject.Find("CanvasMultimedia/Scroll View/Viewport/Content").transform.GetChild(0).gameObject);
         }
 
-        int altoElementoMultimedia=(int)((GameObject)Resources.Load("Prefabs/PanelAudio") as GameObject).GetComponent<RectTransform>().sizeDelta.y;
-        int tamañoContentScroll = (altoElementoMultimedia+5) * (obraActual.audios.Count + obraActual.videos.Count) + 10;
+        int altoElementoMultimedia = (int)((GameObject)Resources.Load("Prefabs/PanelAudio") as GameObject).GetComponent<RectTransform>().sizeDelta.y;
+        int tamañoContentScroll = (altoElementoMultimedia + 5) * (obraActual.audios.Count + obraActual.videos.Count) + 10;
         int primerElementoY = tamañoContentScroll / 2 - 45;
 
         if (obraActual.audios.Count == 0 && obraActual.videos.Count == 0)
@@ -75,7 +76,7 @@ public class ControlVisualizacionObra : MonoBehaviour
             GameObject panel_audio = Instantiate(panel, transform);
             panel_audio.GetComponent<InicializarElementoMultimedia>().inicializarElemento(obraActual.audios[i].nombreMultimedia, obraActual.audios[i].urlMultimedia);
             GameObject canvas_contenedor = GameObject.Find("CanvasMultimedia/Scroll View/Viewport/Content");
-            panel_audio.transform.position = new Vector3(0, (primerElementoY - i * (altoElementoMultimedia+5)), 0);
+            panel_audio.transform.position = new Vector3(0, (primerElementoY - i * (altoElementoMultimedia + 5)), 0);
             panel_audio.transform.SetParent(canvas_contenedor.transform, false);
         }
         for (int i = 0; i < obraActual.videos.Count; i++)
@@ -84,13 +85,25 @@ public class ControlVisualizacionObra : MonoBehaviour
             GameObject panel_video = Instantiate(panel, transform);
             panel_video.GetComponent<InicializarElementoMultimedia>().inicializarElemento(obraActual.videos[i].nombreMultimedia, obraActual.videos[i].urlMultimedia);
             GameObject canvas_contenedor = GameObject.Find("CanvasMultimedia/Scroll View/Viewport/Content");
-            panel_video.transform.position = new Vector3(0, (primerElementoY - (i + obraActual.audios.Count) * (altoElementoMultimedia+5)), 0);
+            panel_video.transform.position = new Vector3(0, (primerElementoY - (i + obraActual.audios.Count) * (altoElementoMultimedia + 5)), 0);
             panel_video.transform.SetParent(canvas_contenedor.transform, false);
         }
         GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[2].desactivarCanvas();
-    }
 
-    public void pausarVisualizacion()
+        //Canvas informacion
+
+        //int childsInfor = GameObject.Find("CanvasInformacion/Scroll View/Viewport/Content").transform.childCount;
+        //  for (int i = 0; i < childsInfor; i++)
+        //  {
+        //      GameObject.DestroyImmediate(GameObject.Find("CanvasInformacion/Scroll View/Viewport/Content").transform.GetChild(0).gameObject);
+        //  }
+        string infoObra = ControlElementosInformacion.getInformacion(obraActual.informacion);
+        GameObject contenedor_info = GameObject.Find("CanvasInformacion/Scroll View/Viewport/Content/txt_info");
+        contenedor_info.GetComponent<Text>().text = infoObra;
+        GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[3].desactivarCanvas();
+
+    }
+    public void terminarVisualizacion()
     {
         Obra obraActual = DatosUsuario.Instance.buscarObra(ObraActual.Instance.idObraActual);
         GameObject calificacion = GameObject.Find("Calificacion");
@@ -99,20 +112,44 @@ public class ControlVisualizacionObra : MonoBehaviour
         obraActual.calificada = true;
         obraActual.calificacion = calificacion.GetComponent<ControlCalificacion>().nota;
         obraActual.tiempoSegundos = cronometro.GetComponent<ControlTiempo>().tiempo;
-        obraActual.favorita=recomendada.transform.GetChild(0).GetComponent<Toggle>().isOn;
-        ObraActual.Instance.idObraActual = -1;
-        DatosUsuario.Instance.ImprimirDatosObras();
+        obraActual.favorita = recomendada.transform.GetChild(0).GetComponent<Toggle>().isOn;
+        ObraActual.Instance.idObraActual = "";
+        //DatosUsuario.Instance.ImprimirDatosObras();
+
+        guardarDatosObra(obraActual);
+
 
         //Cambio de camara
         GameObject controlCamara = GameObject.Find("ControlCamara");
         controlCamara.GetComponent<ControlCamaras>().activarCamaraPrincipal();
-
     }
-    public void terminarVisualizacion()
+
+    private void guardarDatosObra(Obra obraActual)
     {
-        pausarVisualizacion();
-        //Guardar en base de datos
-        //Desabilitar vista obra
+        string json;
+        if (obraActual.favorita)
+        {
+            json = "{" +
+            "\"calificacion\":" + obraActual.calificacion + "," +
+            "\"tiempovisualizacion\":" + obraActual.tiempoSegundos + "," +
+             "\"favorito\":" + "true" + "," +
+              "\"fecha\":" + "\""+System.DateTime.Now.ToString("yyyy-MM-dd")+"\"" +
+            "}";
+        }
+        else
+        {
+            json = "{" +
+           "\"calificacion\":" + obraActual.calificacion + "," +
+           "\"tiempovisualizacion\":" + obraActual.tiempoSegundos + "," +
+            "\"favorito\":" + "false" + "," +
+            "\"fecha\":" + "\""+System.DateTime.Now.ToString("yyyy-MM-dd")+"\"" +
+           "}";
+        }
+        string direccion = "http://api-usuarios-museal.herokuapp.com/api/obravista/" + obraActual.idObraRecorrido;
+        Debug.Log(direccion);
+        Debug.Log(json);
+        ServicioREST.EjecutarOperacion(direccion, "PUT", json);
+        
     }
 
 

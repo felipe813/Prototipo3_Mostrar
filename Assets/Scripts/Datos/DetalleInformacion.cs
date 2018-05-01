@@ -6,7 +6,9 @@ public class DetalleInformacion {
 ///
 	private string _encabezado;
 	private List<string> _datos;
-    ///
+    public DetalleInformacion(){
+        _datos=new List<string>();
+    }
 	public string encabezado
     {
         get { return _encabezado; }

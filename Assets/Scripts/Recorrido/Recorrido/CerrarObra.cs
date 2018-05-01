@@ -10,7 +10,7 @@ public class CerrarObra : MonoBehaviour {
         GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[1].desactivarCanvas();
         GameObject.Find("CanvasIntroduccion").GetComponent<ControlVisibilidadCanvas>().desactivarCanvas();
 		GameObject.Find ("ControlCamara").GetComponent<ControlCamaraSeguimiento>().seguirPersonaje=true;
-        ObraActual.Instance.idObraActual = 0;
+        ObraActual.Instance.idObraActual = "";
 		
     }
 }

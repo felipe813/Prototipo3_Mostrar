@@ -41,7 +41,7 @@ public class DatosUsuario : Singleton<DatosUsuario>
 		}
 		return retorno;
 	}
-    public Obra buscarObra(int idObra){
+    public Obra buscarObra(string idObra){
         Obra retorno=null;
         for (int i = 0; i < obras.Count; i++)
         {
