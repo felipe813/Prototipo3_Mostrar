@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a05777c357bf2594f8162839e0a8d328
+timeCreated: 1525537514
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rounded Elegance
+  fontNames:
+  - Rounded Elegance
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
