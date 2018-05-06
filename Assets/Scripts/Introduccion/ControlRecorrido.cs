@@ -17,6 +17,13 @@ public class ControlRecorrido : MonoBehaviour
     }
     private int obtenerIDRecorrido()
     {
+        /* string idUsuario=DatosUsuario.Instance.idUsuario;
+        string respuesta=ServicioREST.EjecutarOperacion("http://10.20.251.24:8080/"+idUsuario,"GET");
+        Debug.Log(respuesta);
+        JSONNode informacion = JSONNode.Parse(respuesta)[0]["data"];
+        int retorno=informacion["idrecorridosistema"];
+        Debug.Log(retorno);
+        return retorno; */
         return 20;
     }
 
