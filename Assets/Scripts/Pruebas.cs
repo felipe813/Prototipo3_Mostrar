@@ -10,9 +10,9 @@ public class Pruebas : MonoBehaviour
     {
 
         string direccionLocalEsculturas = "C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Creacion/AssetBundles/StandaloneWindows/";
-        string direccionWebEsculturas = "ftp://pruebarealidadaumentada:contrasenia@files.000webhost.com/Prototipo_3/Esculturas/";
+        //string direccionWebEsculturas = "ftp://pruebarealidadaumentada:contrasenia@files.000webhost.com/Prototipo_3/Esculturas/";
         string direccionLocalPinturas = "C:/Users/AndresFelipe/Desktop/RecursosObras/Pinturas/";
-        string direccionWebPinturas = "ftp://pruebarealidadaumentada:contrasenia@files.000webhost.com/Prototipo_3/Pinturas/";
+        //string direccionWebPinturas = "ftp://pruebarealidadaumentada:contrasenia@files.000webhost.com/Prototipo_3/Pinturas/";
         string direccionEsculturas = direccionLocalEsculturas;
         string dreccionPinturas = direccionLocalPinturas;
 
@@ -111,6 +111,26 @@ public class Pruebas : MonoBehaviour
         obra = new Obra("El hijo del hombre", "109");
         obra.url = dreccionPinturas + "El hijo del hombre.jpg";
         obra.tipo = "pintura";
+        DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Borghese vase", "4");
+        obra.url = direccionEsculturas + "obra4";
+        obra.tipo = "escultura";
+        DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Borghese vase", "4");
+        obra.url = direccionEsculturas + "obra4";
+        obra.tipo = "escultura";
+        DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Borghese vase", "4");
+        obra.url = direccionEsculturas + "obra4";
+        obra.tipo = "escultura";
+        DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Borghese vase", "4");
+        obra.url = direccionEsculturas + "obra4";
+        obra.tipo = "escultura";
         DatosUsuario.Instance.obras.Add(obra);
 
         obra = new Obra("Borghese vase", "4");

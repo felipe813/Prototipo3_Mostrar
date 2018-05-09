@@ -12,7 +12,7 @@ public class ControlColisionAvatar : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.name != "Museo")
+        if (collider.gameObject.tag != "Museo")
         {
             if (esPrimeraVez)
             {

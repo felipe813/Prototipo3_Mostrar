@@ -5,10 +5,8 @@ public class CargarObras : MonoBehaviour
 {
     private int cantidadObrasCargadas;
     private int cantidadObras;
-    private bool isBake;
     void Start()
     {
-        isBake = false;
         cantidadObrasCargadas = 0;
         StartCoroutine(cargar());
     }
@@ -74,7 +72,7 @@ public class CargarObras : MonoBehaviour
             }
             if (cantidadObrasCargadas == cantidadObras)
             {
-                isBake = true;
+                
                 GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
             }
             /* WWW www = new WWW(url);
@@ -138,7 +136,7 @@ public class CargarObras : MonoBehaviour
                 }
                 if (cantidadObrasCargadas == cantidadObras)
                 {
-                    isBake = true;
+                    
                     GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
                 }
             }

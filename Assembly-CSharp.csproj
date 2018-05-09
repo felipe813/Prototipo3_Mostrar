@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Herramientas\_MK\MKGlassFree\MKGlassFreeMaterialHelper.cs" />
+     <Compile Include="Assets\Herramientas\GemExample\Scripts\DemoTimeOfDay.cs" />
+     <Compile Include="Assets\Herramientas\GemExample\Scripts\Orbit.cs" />
      <Compile Include="Assets\Herramientas\InAppBrowser\Example\BrowserOpener.cs" />
      <Compile Include="Assets\Herramientas\InAppBrowser\Example\JSExecute.cs" />
      <Compile Include="Assets\Herramientas\InAppBrowser\Example\LocalFileOpener.cs" />
@@ -79,6 +82,12 @@
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceModifierTests.cs" />
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceModifierVolumeTests.cs" />
      <Compile Include="Assets\Herramientas\NavMeshComponents-master\Assets\Tests\NavMeshSurfaceTests.cs" />
+     <Compile Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
+     <Compile Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
+     <Compile Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
+     <Compile Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
+     <Compile Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
+     <Compile Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
      <Compile Include="Assets\Herramientas\SimpleJSON\SimpleJSON.cs" />
      <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -155,26 +164,54 @@
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\PreparacionEscenario.cs" />
      <Compile Include="Assets\Scripts\SceneLoader\SceneLoader.cs" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyIO.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\About\changelog.txt" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\MKGlassCommonFree.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Common\MKGlassInc.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFreeOutlineOnly.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Meta\MKGlassMetaIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlySetup.cginc" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonInc.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyBase.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Surface\MKGlassSurface.cginc" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Meta\MKGlassMeta.cginc" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Common\MKGlassLight.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCasterIO.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForward.cginc" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\VertexLit\MKGlassVertexLitIO.cginc" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForwardIO.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Common\MKGlassDef.cginc" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Common\MKGlassV.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\MKGlassFree.shader" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForwardAddSetup.cginc" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardAddSetup.cginc" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
@@ -183,17 +220,29 @@
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFreeMobile.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonDef.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Surface\MKToonSurfaceIO.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCasterSetup.cginc" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForwardBaseSetup.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonLight.cginc" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForwardBaseSetup.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
      <None Include="Assets\Herramientas\NavMeshComponents-master\ProjectSettings\ProjectVersion.txt" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Meta\MKGlassMetaSetup.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFree.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForward.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\readme.txt" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\VertexLit\MKGlassVertexLitSetup.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonV.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Surface\MKToonSurface.cginc" />
+     <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\VertexLit\MKGlassVertexLit.cginc" />
+     <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Surface\MKGlassSurfaceIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCaster.cginc" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -215,6 +264,21 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="ProBuilderCore-Unity5">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ </Reference>
+ <Reference Include="ProBuilderMeshOps-Unity5">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ </Reference>
+ <Reference Include="KdTreeLib">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ </Reference>
+ <Reference Include="pb_Stl">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ </Reference>
+ <Reference Include="Poly2Tri">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-2017.1-Editor">
  <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Editor.dll</HintPath>
