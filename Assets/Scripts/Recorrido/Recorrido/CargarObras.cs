@@ -63,7 +63,7 @@ public class CargarObras : MonoBehaviour
                 GameObject contenedorObra = GameObject.Find("Obras");
                 obraPresentada.transform.parent = contenedorObra.transform;
                 obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
-                obraPresentada.transform.localScale=new Vector3(2,2,2);
+                obraPresentada.transform.localScale=new Vector3(1.5f,1.5f,1.5f);
 
                 //GameObject.Find("EspacioObra").SetActive(false);
 

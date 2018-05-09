@@ -20,9 +20,9 @@ public class Pruebas : MonoBehaviour
         DatosUsuario.Instance.idUsuario = "123";
         DatosUsuario.Instance.obras = new List<Obra>();
 
-        Obra obra = new Obra("Amphitrite", "5");
+        Obra obra = new Obra("Amphitrite", "1");
         obra.calificada = false;
-        obra.url = direccionEsculturas + "obra5";
+        obra.url = direccionEsculturas + "obra1";
         obra.tipo = "escultura";
         obra.audios.Add(new ElementoMultimedia("Audio1", "Audios 1"));
         obra.videos.Add(new ElementoMultimedia("Video1", "Video 1"));
@@ -47,6 +47,7 @@ public class Pruebas : MonoBehaviour
         obra.informacion.informacion[3].datos.Add("Barroco");
         obra.informacion.informacion[3].datos.Add("Cubismo");
         DatosUsuario.Instance.obras.Add(obra);
+
         obra = new Obra("Gioconda", "100");
         obra.url = dreccionPinturas + "La Gioconda.jpg";
         obra.tipo = "pintura";
@@ -113,28 +114,48 @@ public class Pruebas : MonoBehaviour
         obra.tipo = "pintura";
         DatosUsuario.Instance.obras.Add(obra);
 
-        obra = new Obra("Borghese vase", "4");
+        obra = new Obra("Borghese vase", "2");
+        obra.url = direccionEsculturas + "obra2";
+        obra.tipo = "escultura";
+        DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Caballos de Marly", "3");
+        obra.url = direccionEsculturas + "obra3";
+        obra.tipo = "escultura";
+        DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Chasseur", "4");
         obra.url = direccionEsculturas + "obra4";
         obra.tipo = "escultura";
         DatosUsuario.Instance.obras.Add(obra);
 
-        obra = new Obra("Borghese vase", "4");
-        obra.url = direccionEsculturas + "obra4";
+        obra = new Obra("Diana de Versalles", "5");
+        obra.url = direccionEsculturas + "obra5";
         obra.tipo = "escultura";
         DatosUsuario.Instance.obras.Add(obra);
 
-        obra = new Obra("Borghese vase", "4");
-        obra.url = direccionEsculturas + "obra4";
+        obra = new Obra("Espartaco", "6");
+        obra.url = direccionEsculturas + "obra6";
         obra.tipo = "escultura";
         DatosUsuario.Instance.obras.Add(obra);
 
-        obra = new Obra("Borghese vase", "4");
-        obra.url = direccionEsculturas + "obra4";
+        obra = new Obra("Filopemen herido", "7");
+        obra.url = direccionEsculturas + "obra7";
+        obra.tipo = "escultura";
+       DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Hannibal", "8");
+        obra.url = direccionEsculturas + "obra8";
         obra.tipo = "escultura";
         DatosUsuario.Instance.obras.Add(obra);
 
-        obra = new Obra("Borghese vase", "4");
-        obra.url = direccionEsculturas + "obra4";
+        obra = new Obra("La fama de Luis XIV", "9");
+        obra.url = direccionEsculturas + "obra9";
+        obra.tipo = "escultura";
+        DatosUsuario.Instance.obras.Add(obra);
+
+        obra = new Obra("Meleagre tuant le sanglier", "10");
+        obra.url = direccionEsculturas + "obra10";
         obra.tipo = "escultura";
         DatosUsuario.Instance.obras.Add(obra);
 
