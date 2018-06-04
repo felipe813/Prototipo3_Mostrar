@@ -41,7 +41,7 @@ public class ControlVisualizacionObra : MonoBehaviour
         GameObject controlCamara = GameObject.Find("ControlCamara");
 
 
-        controlCamara.GetComponent<ControlCamaras>().activarCamaraObra(obraActual.posicion, obraActual.anguloRotacion, esPintura);
+        //controlCamara.GetComponent<ControlCamaras>().activarCamaraObra(obraActual.posicion, obraActual.anguloRotacion, esPintura);
 
 
         //Canvas multimedia
@@ -102,6 +102,8 @@ public class ControlVisualizacionObra : MonoBehaviour
         contenedor_info.GetComponent<Text>().text = infoObra;
         GameObject.Find("UI").GetComponents<ControlVisibilidadCanvas>()[3].desactivarCanvas();
 
+
+        //Esconder museo menos esta obra
     }
     public void terminarVisualizacion()
     {
@@ -121,7 +123,7 @@ public class ControlVisualizacionObra : MonoBehaviour
 
         //Cambio de camara
         GameObject controlCamara = GameObject.Find("ControlCamara");
-        controlCamara.GetComponent<ControlCamaras>().activarCamaraPrincipal();
+       // controlCamara.GetComponent<ControlCamaras>().activarCamaraPrincipal();
     }
 
     private void guardarDatosObra(Obra obraActual)
@@ -148,7 +150,7 @@ public class ControlVisualizacionObra : MonoBehaviour
         string direccion = "http://api-usuarios-museal.herokuapp.com/api/obravista/" + obraActual.idObraRecorrido;
         Debug.Log(direccion);
         Debug.Log(json);
-        ServicioREST.EjecutarOperacion(direccion, "PUT", json);
+        //ServicioREST.EjecutarOperacion(direccion, "PUT", json);
         
     }
 

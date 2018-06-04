@@ -5,8 +5,13 @@ public class CargarObras : MonoBehaviour
 {
     private int cantidadObrasCargadas;
     private int cantidadObras;
+
+    private List<GameObject> obras;
+    GameObject escenario;
     void Start()
     {
+        obras=new List<GameObject>();
+        escenario=GameObject.Find("Escenario");
         cantidadObrasCargadas = 0;
         StartCoroutine(cargar());
     }
@@ -42,7 +47,7 @@ public class CargarObras : MonoBehaviour
             }
             if (!string.IsNullOrEmpty(www.error))
             {
-                Debug.Log(www.error +" : "+ url);
+                Debug.Log(www.error + " : " + url);
                 cantidadObras--;
                 yield return null;
             }
@@ -52,9 +57,10 @@ public class CargarObras : MonoBehaviour
                 GameObject mya = obra.LoadAsset("Obra") as GameObject;
                 obra.Unload(false);
                 GameObject obraPresentada = Instantiate(mya);
+                obras.Add(obraPresentada);
                 GameObject modelo3D = GameObject.Find("Modelo" + DatosUsuario.Instance.obras[index].id);
                 // GameObject modelo3D = GameObject.Find("Modelo");
-                
+
                 GameObject obraPrincipal = modelo3D.transform.GetChild(0).gameObject;
 
                 obraPrincipal.AddComponent<AbrirObra>();
@@ -63,7 +69,7 @@ public class CargarObras : MonoBehaviour
                 GameObject contenedorObra = GameObject.Find("Obras");
                 obraPresentada.transform.parent = contenedorObra.transform;
                 obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
-                obraPresentada.transform.localScale=new Vector3(1.5f,1.5f,1.5f);
+                obraPresentada.transform.localScale = new Vector3(2f, 2f, 2f);
 
                 //GameObject.Find("EspacioObra").SetActive(false);
 
@@ -72,7 +78,7 @@ public class CargarObras : MonoBehaviour
             }
             if (cantidadObrasCargadas == cantidadObras)
             {
-                
+
                 GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
             }
             /* WWW www = new WWW(url);
@@ -111,7 +117,7 @@ public class CargarObras : MonoBehaviour
                 yield return www;
                 if (!string.IsNullOrEmpty(www.error))
                 {
-                    Debug.Log(www.error +" : "+ url);
+                    Debug.Log(www.error + " : " + url);
                     cantidadObras--;
                     yield return null;
                 }
@@ -120,6 +126,7 @@ public class CargarObras : MonoBehaviour
 
                     GameObject cuadro = (GameObject)Resources.Load("Prefabs/Obra") as GameObject;
                     GameObject obraPresentada = Instantiate(cuadro, transform);
+                    obras.Add(obraPresentada);
                     GameObject contenedorObra = GameObject.Find("Obras");
                     obraPresentada.transform.parent = contenedorObra.transform;
                     obraPresentada.transform.Rotate(Vector3.up, DatosUsuario.Instance.obras[index].anguloRotacion);
@@ -136,10 +143,20 @@ public class CargarObras : MonoBehaviour
                 }
                 if (cantidadObrasCargadas == cantidadObras)
                 {
-                    
                     GameObject.Find("NavMesh").GetComponent<NavMeshDinamico>().construirNav();
+                    GameObject contenedorObra = GameObject.Find("ImageTarget");
+                    GameObject Escenario = GameObject.Find("Escenario");
+                    Escenario.transform.parent = contenedorObra.transform;
                 }
             }
+        }
+    }
+
+    public void ActivarObras(){
+        escenario.SetActive(true);
+        for (int i = 0; i < obras.Count; i++)
+        {
+            obras[i].gameObject.SetActive(true);
         }
     }
 }

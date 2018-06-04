@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_0;UNITY_2017_1;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_0;UNITY_2017_1;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;VUFORIA_ANDROID_SETTINGS;UNITY_HAS_GOOGLEVR</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -123,12 +123,14 @@
      <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Resources\Imagenes\Inicio\gif\GIF.cs" />
+     <Compile Include="Assets\Scripts\Bienvenida\CargarInicio.cs" />
      <Compile Include="Assets\Scripts\Datos\DatosUsuario.cs" />
      <Compile Include="Assets\Scripts\Datos\DetalleInformacion.cs" />
      <Compile Include="Assets\Scripts\Datos\ElementoMultimedia.cs" />
      <Compile Include="Assets\Scripts\Datos\Informacion.cs" />
      <Compile Include="Assets\Scripts\Datos\Obra.cs" />
      <Compile Include="Assets\Scripts\Datos\ObraActual.cs" />
+     <Compile Include="Assets\Scripts\Datos\ObraEnVisualizacion.cs" />
      <Compile Include="Assets\Scripts\Inicio\CalendarController.cs" />
      <Compile Include="Assets\Scripts\Inicio\CalendarDateItem.cs" />
      <Compile Include="Assets\Scripts\Inicio\ControlLogin.cs" />
@@ -145,6 +147,7 @@
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlCalificacion.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlCamaras.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlTiempo.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlTransofrmacionObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlVisibilidadCanvasObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\ControlVisualizacionObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\MostrarObra\InicializarElementoMultimedia.cs" />
@@ -156,14 +159,54 @@
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\CargarObras.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\CerrarObra.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlCamaraSeguimiento.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlCanvasFinalizacion.cs" />
+     <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlCanvasMarcador.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlColisionAvatar.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlElementosInformacion.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\ControlVisibilidadCanvas.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\NavMeshDinamico.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\PlayerNavigation.cs" />
      <Compile Include="Assets\Scripts\Recorrido\Recorrido\PreparacionEscenario.cs" />
+     <Compile Include="Assets\Scripts\SceneLoader\Loader.cs" />
      <Compile Include="Assets\Scripts\SceneLoader\SceneLoader.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\GLErrorHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\HideExcessAreaBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ImageTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\AndroidUnityPlayer.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\ComponentFactoryStarterBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\IOSUnityPlayer.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\VuforiaBehaviourComponentFactory.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Internal\WSAUnityPlayer.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\MaskOutBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\MultiTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ObjectTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\PropBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ReconstructionBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\ReconstructionFromTargetBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\SurfaceBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\TextRecoBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\TurnOffBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\TurnOffWordBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\UserDefinedTargetBuildingBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\Utilities\VRIntegrationHelper.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VideoBackgroundBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VirtualButtonBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VuforiaBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VuforiaConfiguration.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VuforiaRuntimeInitialization.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\VuMarkBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -172,6 +215,8 @@
      <None Include="Assets\Herramientas\ProCore\ProBuilder\About\changelog.txt" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\Vuforia\link.xml" />
+     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
@@ -179,10 +224,13 @@
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Common\MKGlassInc.cginc" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFreeOutlineOnly.shader" />
+     <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Meta\MKGlassMetaIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlySetup.cginc" />
+     <None Include="Assets\StreamingAssets\Vuforia\marcadorUD.xml" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Vuforia\readme_SDK.txt" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonInc.cginc" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Outline\MKToonOutlineOnlyBase.cginc" />
@@ -196,6 +244,7 @@
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForward.cginc" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\VertexLit\MKGlassVertexLitIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForwardIO.cginc" />
+     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Common\MKGlassDef.cginc" />
@@ -205,9 +254,12 @@
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\MKGlassFree.shader" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
+     <None Include="Assets\Vuforia\license_3rdpartynotice.txt" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForwardAddSetup.cginc" />
+     <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
+     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Herramientas\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
@@ -232,7 +284,9 @@
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Forward\MKGlassForwardBaseSetup.cginc" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
      <None Include="Assets\Herramientas\NavMeshComponents-master\ProjectSettings\ProjectVersion.txt" />
+     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Meta\MKGlassMetaSetup.cginc" />
+     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\MKToonFree.shader" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Forward\MKToonForward.cginc" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
@@ -241,6 +295,7 @@
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Common\MKToonV.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\Surface\MKToonSurface.cginc" />
      <None Include="Assets\Herramientas\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\VertexLit\MKGlassVertexLit.cginc" />
      <None Include="Assets\Herramientas\_MK\MKGlassFree\Shader\Inc\Surface\MKGlassSurfaceIO.cginc" />
      <None Include="Assets\Herramientas\_MK\MKToonFree\Shader\Inc\ShadowCaster\MKToonShadowCaster.cginc" />
@@ -285,6 +340,9 @@
  </Reference>
  <Reference Include="TextMeshPro-2017.1-Runtime">
  <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Herramientas/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Vuforia.UnityExtensions">
+ <HintPath>C:/Users/AndresFelipe/Documents/ProyectosTesis/ProyectosUnity/Prototipo3_Mostrar/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

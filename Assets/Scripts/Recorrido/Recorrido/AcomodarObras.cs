@@ -70,7 +70,7 @@ public class AcomodarObras : MonoBehaviour
         cantidadPinturas = DatosUsuario.Instance.cantidadPinturas();
         cantidadEsculturas = DatosUsuario.Instance.cantidadEsculturas();
 
-        altopinturas = 14;
+        altopinturas = 18;
         Vector3[] medio = new Vector3[10];
         switch (cantidadPinturas)
         {

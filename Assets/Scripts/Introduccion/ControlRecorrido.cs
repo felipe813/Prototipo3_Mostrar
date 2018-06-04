@@ -13,34 +13,41 @@ public class ControlRecorrido : MonoBehaviour
 
     public void iniciarRecorrido()
     {
-        SceneLoader.LoadScene("Escena_Museo");
+        Loader loader =GameObject.Find("Loader").GetComponent<Loader>();
+		loader.LoadLevel("Escena_Museo");
+        //SceneLoader.LoadScene("Escena_Museo");
     }
     private int obtenerIDRecorrido()
     {
-        /* string idUsuario=DatosUsuario.Instance.idUsuario;
-        string respuesta=ServicioREST.EjecutarOperacion("http://10.20.251.24:8080/"+idUsuario,"GET");
+        string idUsuario=DatosUsuario.Instance.idUsuario;;
+        //string respuesta=ServicioREST.EjecutarOperacion("http://10.20.251.24:8080/"+idUsuario,"GET");
+        //string respuesta=ServicioREST.EjecutarOperacion("http://servidor-multiagente.herokuapp.com/usuario/"+idUsuario,"GET");
+        string respuesta=ServicioREST.EjecutarOperacion("http://servidor-multiagente.herokuapp.com/usuario/"+idUsuario,"GET");
         Debug.Log(respuesta);
-        JSONNode informacion = JSONNode.Parse(respuesta)[0]["data"];
+        JSONNode informacion = JSONNode.Parse(respuesta)["data"];
         int retorno=informacion["idrecorridosistema"];
         Debug.Log(retorno);
-        return retorno; */
-        return 20;
+        return retorno; 
     }
 
     private List<int> obtenerIDObrasNoVistas()
     {
         List<int> retorno = new List<int>();
         int idRecorrido = obtenerIDRecorrido();
+        Debug.Log(idRecorrido);
         string respuesta = ServicioREST.EjecutarOperacion("http://api-usuarios-museal.herokuapp.com/api/obravista/obrasnovistasrecorrido/" + idRecorrido, "GET");
+        Debug.Log(respuesta);
         JSONNode informacion = JSONNode.Parse(respuesta)["data"];
         for (int i = 0; i < informacion.Count; i++)
         {
             retorno.Add(informacion[i]["idobravistarecorrido"]);
         }
+        Debug.Log(retorno);
         return retorno;
     }
 
     private void llenarDatosObras()
+
     {
         List<int> idsObrasNoVistas = obtenerIDObrasNoVistas();
         DatosUsuario.Instance.obras = new List<Obra>();

@@ -7,6 +7,6 @@ public class CargarDatos : MonoBehaviour {
 
 	public Text textoPrueba;
 	void Start () {
-		textoPrueba.text="Se logueo el usuario "+DatosUsuario.Instance.nombreUsuario+" con ID: "+DatosUsuario.Instance.idUsuario;
+		textoPrueba.text="Bienvenido  "+DatosUsuario.Instance.nombreUsuario;
 	}
 }

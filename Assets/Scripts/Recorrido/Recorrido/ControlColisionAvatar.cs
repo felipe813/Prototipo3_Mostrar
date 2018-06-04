@@ -6,30 +6,139 @@ public class ControlColisionAvatar : MonoBehaviour
 {
 
     private bool esPrimeraVez;
+    private bool estaEnColision;
     void Start()
     {
         esPrimeraVez = false;
+        estaEnColision = false;
     }
-    void OnTriggerEnter(Collider collider)
+    void Update()
     {
-        if (collider.gameObject.tag != "Museo")
+
+    }
+    void OnTriggerStay(Collider collider)
+    {
+        //Debug.Log("Está en colision con " + collider.name);
+        PlayerNavigation script = GameObject.Find("ControlMovimiento").GetComponent<PlayerNavigation>();
+        if (!script.estaEnMovimiento()&&script.seMovio)
         {
-            if (esPrimeraVez)
+            //Debug.Log("Entró en una colision valida");
+            if (!estaEnColision)
             {
-                esPrimeraVez = false;
-            }
-            else
-            {
-
-                if (collider.gameObject.GetComponent<AbrirObra>() != null)
+                if (collider.gameObject.tag != "Museo")
                 {
-                    collider.gameObject.GetComponent<AbrirObra>().abrirObra();
-                    esPrimeraVez = true;
-                }
+                    
+                    if (esPrimeraVez)
+                    {
+                        esPrimeraVez = false;
+                        //Debug.Log("Es primera vez");
+                    }
+                    else
+                    {
+                        //Debug.Log("No es primera vez");
+                        if (collider.gameObject.GetComponent<AbrirObra>() != null)
+                        {
+                            estaEnColision = true;
+                            //Debug.Log("Es a un objeto Abrir Obra");
+                            collider.gameObject.GetComponent<AbrirObra>().abrirObra();
 
+                            esPrimeraVez = true;
+
+                            //Esconder Escenario y obras
+                            GameObject.Find("Escenario").SetActive(false);
+                            GameObject obras = GameObject.Find("Obras");
+                            for (int i = 0; i < obras.transform.childCount; i++)
+                            {
+                                GameObject obra = obras.transform.GetChild(i).gameObject;
+                                if (obra.name != "UI"){                             
+                                    if (obra.transform.GetChild(0).transform.position != collider.gameObject.transform.position)
+                                    //if (obra.transform.GetChild(0).GetInstanceID()!=(collider.gameObject).GetInstanceID())
+                                    {
+                                        if (obra.transform.GetChild(0).childCount != 0)
+                                        {
+                                            if (obra.transform.GetChild(0).transform.GetChild(0).transform.position != collider.gameObject.transform.position)
+                                            //if (obra.transform.GetChild(0).transform.GetChild(0).GetInstanceID()!=(collider.gameObject).GetInstanceID())
+                                            {
+                                                obra.SetActive(false);
+                                            }
+                                            else{
+                                                ObraEnVisualizacion.Instance.obraSeleccionada=obra;
+                                                Debug.Log("Encontró obra con nombre "+obra.name);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            obra.SetActive(false);
+                                        }
+                                    }else{
+                                        ObraEnVisualizacion.Instance.obraSeleccionada=obra;
+                                        Debug.Log("Encontró obra con nombre "+obra.name);
+                                    }
+                                }
+                            }
+                            script.seMovio=false;
+                            estaEnColision=false;
+                        }
+                    }
+                }
 
             }
         }
-
     }
+    /* void OnTriggerEnter(Collider collider)
+    {
+        PlayerNavigation script = GameObject.Find("ControlMovimiento").GetComponent<PlayerNavigation>();
+        if (!script.estaEnMovimiento())
+        {
+            Debug.Log("Estrello con " + collider.name);
+            if (collider.gameObject.tag != "Museo")
+            {
+
+                if (esPrimeraVez)
+                {
+                    esPrimeraVez = false;
+                    Debug.Log("Es primera vez");
+                }
+                else
+                {
+                    Debug.Log("No es primera vez");
+                    if (collider.gameObject.GetComponent<AbrirObra>() != null)
+                    {
+                        Debug.Log("Es a un objeto Abrir Obra");
+                        collider.gameObject.GetComponent<AbrirObra>().abrirObra();
+
+                        esPrimeraVez = true;
+
+                        //Esconder Escenario y obras
+                        GameObject.Find("Escenario").SetActive(false);
+                        GameObject obras = GameObject.Find("Obras");
+                        for (int i = 0; i < obras.transform.childCount; i++)
+                        {
+                            GameObject obra = obras.transform.GetChild(i).gameObject;
+                            if (obra.name != "UI")
+                            {
+                                if (obra.transform.GetChild(0).transform.position != collider.gameObject.transform.position)
+                                //if (obra.transform.GetChild(0).GetInstanceID()!=(collider.gameObject).GetInstanceID())
+                                {
+                                    if (obra.transform.GetChild(0).childCount != 0)
+                                    {
+                                        if (obra.transform.GetChild(0).transform.GetChild(0).transform.position != collider.gameObject.transform.position)
+                                        //if (obra.transform.GetChild(0).transform.GetChild(0).GetInstanceID()!=(collider.gameObject).GetInstanceID())
+                                        {
+                                            obra.SetActive(false);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        obra.SetActive(false);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    } */
 }

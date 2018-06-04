@@ -22,7 +22,9 @@ public class ControlLogin : MonoBehaviour
         {
             DatosUsuario.Instance.idUsuario = "" + idUsuario;
             DatosUsuario.Instance.nombreUsuario = txt_usuario.text;
-            SceneLoader.LoadScene("Escena_Introduccion");
+            //SceneLoader.LoadScene("Escena_Introduccion");
+            Loader loader =GameObject.Find("Loader").GetComponent<Loader>();
+		    loader.LoadLevel("Escena_Introduccion");
         }
     }
     private int existePerfil(string usuario, string password, int tipoLogueo)

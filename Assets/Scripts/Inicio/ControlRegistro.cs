@@ -40,7 +40,9 @@ public class ControlRegistro : MonoBehaviour
             idUsuario = informacion["idusuario"];
             DatosUsuario.Instance.idUsuario = "" + idUsuario;
             DatosUsuario.Instance.nombreUsuario = txt_usuario.text;
-            SceneLoader.LoadScene("Escena_Introduccion");
+            //SceneLoader.LoadScene("Escena_Introduccion");
+            Loader loader =GameObject.Find("LoaderR").GetComponent<Loader>();
+		    loader.LoadLevel("Escena_Introduccion");
         }
         else
         {

@@ -10,8 +10,8 @@ public class NavMeshDinamico : MonoBehaviour
     public void construirNav()
     {
         museo.BuildNavMesh();
-        //GameObject.Find("RamplaIzquierdaSuperior").SetActive(false);
-        //GameObject.Find("RamplaIzquierdaInferior").SetActive(false);
+        GameObject.Find("rampa1").SetActive(false);
+        GameObject.Find("rampa2").SetActive(false);
         //GameObject.Find("RamplaDerechaSuperior").SetActive(false);
         //GameObject.Find("RamplaDerechaInferior").SetActive(false);
          GameObject espacioObra=GameObject.Find("EspacioObra");
