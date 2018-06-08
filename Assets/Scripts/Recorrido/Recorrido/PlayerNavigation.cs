@@ -7,11 +7,13 @@ public class PlayerNavigation : MonoBehaviour
     public Camera cam;
     public NavMeshAgent navMeshAgent;
     public bool seMovio;
+    private bool seClickeo;
 
     private Vector3 posicionAnterior;
     void Start()
     {
         seMovio = false;
+        seClickeo=false;
         posicionAnterior = navMeshAgent.transform.localPosition;
     }
     void Update()
@@ -25,14 +27,17 @@ public class PlayerNavigation : MonoBehaviour
             {
 
                 navMeshAgent.SetDestination(hit.point);
+                seClickeo=true;
 
             }
         }
 //		Debug.Log("Posiciones: "+navMeshAgent.transform.localPosition+" -- "+posicionAnterior);
-        if (navMeshAgent.transform.localPosition != posicionAnterior)
+        if (navMeshAgent.transform.localPosition != posicionAnterior&& seClickeo)
         {
        //     Debug.Log("Se cambio se movio");
             seMovio = true;
+            seClickeo=false;
+            Debug.Log("SE MOVIO PASO A TRUE");
         }
 		posicionAnterior=navMeshAgent.transform.localPosition;
 

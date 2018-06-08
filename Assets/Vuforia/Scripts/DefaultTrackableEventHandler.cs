@@ -108,8 +108,13 @@ namespace Vuforia
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 
-            // CODIGO PROPIO
-            GameObject.Find("BuscarMarcador").GetComponent<ControlCanvasMarcador>().activarCanvas();
+            /// CODIGO PROPIO
+            
+            if(GameObject.Find("Museo")!=null){
+                GameObject.Find("BuscarMarcador").GetComponent<ControlCanvasMarcador>().activarCanvas();
+            }
+
+            ///
         }
 
         #endregion // PRIVATE_METHODS

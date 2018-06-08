@@ -19,7 +19,13 @@ public class ControlColisionAvatar : MonoBehaviour
     void OnTriggerStay(Collider collider)
     {
         //Debug.Log("Está en colision con " + collider.name);
+        
         PlayerNavigation script = GameObject.Find("ControlMovimiento").GetComponent<PlayerNavigation>();
+       /*  Debug.Log("VARIABLES");
+        Debug.Log("Esta en movimiento "+script.estaEnMovimiento());
+        Debug.Log("Se movio "+script.seMovio);
+        Debug.Log("En colision "+estaEnColision);
+        Debug.Log("Es primera vez "+esPrimeraVez); */
         if (!script.estaEnMovimiento()&&script.seMovio)
         {
             //Debug.Log("Entró en una colision valida");
@@ -38,6 +44,7 @@ public class ControlColisionAvatar : MonoBehaviour
                         //Debug.Log("No es primera vez");
                         if (collider.gameObject.GetComponent<AbrirObra>() != null)
                         {
+                            Debug.Log("Entro a abrir obra ..........................................");
                             estaEnColision = true;
                             //Debug.Log("Es a un objeto Abrir Obra");
                             collider.gameObject.GetComponent<AbrirObra>().abrirObra();
@@ -64,6 +71,8 @@ public class ControlColisionAvatar : MonoBehaviour
                                             else{
                                                 ObraEnVisualizacion.Instance.obraSeleccionada=obra;
                                                 Debug.Log("Encontró obra con nombre "+obra.name);
+                                                script.seMovio=false;
+                                                estaEnColision=false;
                                             }
                                         }
                                         else
@@ -72,12 +81,13 @@ public class ControlColisionAvatar : MonoBehaviour
                                         }
                                     }else{
                                         ObraEnVisualizacion.Instance.obraSeleccionada=obra;
+                                        script.seMovio=false;
+                                        estaEnColision=false;
                                         Debug.Log("Encontró obra con nombre "+obra.name);
                                     }
                                 }
                             }
-                            script.seMovio=false;
-                            estaEnColision=false;
+                            
                         }
                     }
                 }

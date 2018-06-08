@@ -150,7 +150,7 @@ public class ControlVisualizacionObra : MonoBehaviour
         string direccion = "http://api-usuarios-museal.herokuapp.com/api/obravista/" + obraActual.idObraRecorrido;
         Debug.Log(direccion);
         Debug.Log(json);
-        //ServicioREST.EjecutarOperacion(direccion, "PUT", json);
+        ServicioREST.EjecutarOperacion(direccion, "PUT", json);
         
     }
 
